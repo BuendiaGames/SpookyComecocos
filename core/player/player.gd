@@ -4,7 +4,10 @@ extends CharacterBody3D
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
 
-const MOUSECAM = 0.005
+var current_anim = "idle"
+
+func _ready() -> void:
+	change_anim(current_anim)
 
 
 func _process(delta: float) -> void:
@@ -24,15 +27,17 @@ func _process(delta: float) -> void:
 		$model.rotation.y = look_direction.angle()
 		
 		#Animacion
-		$model/AnimationPlayer.play("walk")
+		change_anim("walk")
 	else:	
 		#Elimina la velocidad
 		velocity.x = 0.0
 		velocity.z = 0.0
-		$model/AnimationPlayer.play("idle")
+		change_anim("idle")
 	
 	#Haz el movimiento
 	move_and_slide()
 
-
-	
+func change_anim(new_anim):
+	if current_anim != new_anim:
+		current_anim = new_anim
+		$model/AnimationPlayer.play(new_anim)

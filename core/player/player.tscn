@@ -7,7 +7,7 @@
 radius = 0.132491
 height = 0.751309
 
-[node name="Node3D" type="CharacterBody3D"]
+[node name="player" type="CharacterBody3D"]
 script = ExtResource("1_evuen")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
@@ -16,11 +16,3 @@ shape = SubResource("CapsuleShape3D_ongd4")
 
 [node name="model" parent="." instance=ExtResource("1_y2k6n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.4, 0)
-
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0536081, 0.165728, 0.713341)
-current = true
-fov = 99.9115
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.013212, 4.1618)
