@@ -13,7 +13,7 @@ func _process(delta: float) -> void:
 	
 	#Si pulsamos algo, input_dir !=0 y andamos
 	if input_dir:
-		#Rotar nuestro input en la direccion donde mira la camara
+		#Rotar nuestro input en la direccion
 		var direction = Vector3(input_dir.x, 0, input_dir.y)
 		
 		#Normalizar velocidad (evita diagonales mas rapidas)
