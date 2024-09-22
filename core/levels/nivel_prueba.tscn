@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://dab2jtp2kb4aa"]
+[gd_scene load_steps=10 format=3 uid="uid://dab2jtp2kb4aa"]
 
 [ext_resource type="PackedScene" uid="uid://62yf7c7xapgl" path="res://core/characters/ghost/ghost.tscn" id="1_e83xj"]
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3d.gd" id="2_mop17"]
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="3_axrpb"]
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/resources/camera_3d_resource.gd" id="4_t5d5s"]
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="5_yq6wk"]
+[ext_resource type="PackedScene" uid="uid://brracca53ddlb" path="res://core/characters/skeleton/skeleton.tscn" id="6_jkrtk"]
 
 [sub_resource type="Resource" id="Resource_df2kg"]
 script = ExtResource("3_axrpb")
@@ -56,3 +57,5 @@ transform = Transform3D(0.0565132, 0, -0.9984, 0, 1, 0, 0.9984, 0, 0.0565132, -1
 
 [node name="ghost" parent="ghost_route/pathfollower" instance=ExtResource("1_e83xj")]
 transform = Transform3D(0.0565134, 0, 0.998403, 0, 1, 0, -0.998403, 0, 0.0565134, 0.939534, 0, -1.11535)
+
+[node name="CharacterBody3D" parent="." instance=ExtResource("6_jkrtk")]
