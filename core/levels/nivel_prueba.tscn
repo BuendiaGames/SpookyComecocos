@@ -1,0 +1,58 @@
+[gd_scene load_steps=9 format=3 uid="uid://dab2jtp2kb4aa"]
+
+[ext_resource type="PackedScene" uid="uid://62yf7c7xapgl" path="res://core/characters/ghost/ghost.tscn" id="1_e83xj"]
+[ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3d.gd" id="2_mop17"]
+[ext_resource type="Script" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="3_axrpb"]
+[ext_resource type="Script" path="res://addons/phantom_camera/scripts/resources/camera_3d_resource.gd" id="4_t5d5s"]
+[ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="5_yq6wk"]
+
+[sub_resource type="Resource" id="Resource_df2kg"]
+script = ExtResource("3_axrpb")
+duration = 1.0
+transition = 0
+ease = 2
+
+[sub_resource type="Resource" id="Resource_ektvk"]
+script = ExtResource("4_t5d5s")
+cull_mask = 1048575
+h_offset = 0.0
+v_offset = 0.0
+projection = 0
+fov = 75.0
+size = 1.0
+frustum_offset = Vector2(0, 0)
+near = 0.05
+far = 4000.0
+
+[sub_resource type="Curve3D" id="Curve3D_n70jg"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -1.16667, 0, -0.874999, 0, 0, 0, 0, 0, 0, 0.990309, 0, -0.997092, 0, 0, 0, 0, 0, 0, 3.17442, 0, 0.142442, 0, 0, 0, 0, 0, 0, 1.89922, 0, 2.04166, 0, 0, 0, 0, 0, 0, -1.54651, 0, 2.25872, 0, 0, 0, 0, 0, 0, -3.09302, 0, 0.0746122, 0, 0, 0, 0, 0, 0, -2.06201, 0, -1.29554, 0, 0, 0, 0, 0, 0, -1.16667, 0, -0.874999),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 8
+
+[node name="Node3D" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.75781, 0, 1.73995)
+
+[node name="PhantomCamera3D" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.05656)
+script = ExtResource("2_mop17")
+tween_resource = SubResource("Resource_df2kg")
+camera_3d_resource = SubResource("Resource_ektvk")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.05656)
+
+[node name="PhantomCameraHost" type="Node" parent="Camera3D"]
+script = ExtResource("5_yq6wk")
+
+[node name="ghost_route" type="Path3D" parent="."]
+curve = SubResource("Curve3D_n70jg")
+
+[node name="pathfollower" type="PathFollow3D" parent="ghost_route"]
+transform = Transform3D(0.0565132, 0, -0.9984, 0, 1, 0, 0.9984, 0, 0.0565132, -1.16667, 0, -0.874999)
+
+[node name="ghost" parent="ghost_route/pathfollower" instance=ExtResource("1_e83xj")]
+transform = Transform3D(0.0565134, 0, 0.998403, 0, 1, 0, -0.998403, 0, 0.0565134, 0.939534, 0, -1.11535)
