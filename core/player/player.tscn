@@ -1,3 +1,26 @@
-[gd_scene format=3 uid="uid://bxt88ulyvcl7k"]
+[gd_scene load_steps=4 format=3 uid="uid://bxt88ulyvcl7k"]
+
+[ext_resource type="Script" path="res://core/player/player.gd" id="1_evuen"]
+[ext_resource type="PackedScene" uid="uid://83ygvrrfnfh1" path="res://3dmodels/character-digger.glb" id="1_y2k6n"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ongd4"]
+radius = 0.132491
+height = 0.751309
 
 [node name="Node3D" type="CharacterBody3D"]
+script = ExtResource("1_evuen")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00235605, 0, 0)
+shape = SubResource("CapsuleShape3D_ongd4")
+
+[node name="model" parent="." instance=ExtResource("1_y2k6n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.4, 0)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0536081, 0.165728, 0.713341)
+current = true
+fov = 99.9115
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.013212, 4.1618)
