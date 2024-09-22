@@ -4,8 +4,6 @@ extends CharacterBody3D
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
 
-const MOUSECAM = 0.005
-
 
 func _process(delta: float) -> void:
 	#Vector (x,y) con la direccion de las flechas. Con un joystick es continua
