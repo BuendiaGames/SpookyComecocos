@@ -1,0 +1,124 @@
+[gd_scene load_steps=9 format=3 uid="uid://csnpyvr1v3gc8"]
+
+[ext_resource type="PackedScene" uid="uid://ftboyhub4agj" path="res://3dmodels/iron-fence-border.glb" id="1_w0ps5"]
+[ext_resource type="PackedScene" uid="uid://cc4acm4ynfxt7" path="res://3dmodels/iron-fence-border-curve.glb" id="2_nw3se"]
+[ext_resource type="PackedScene" uid="uid://bhx7gr4poe1vx" path="res://3dmodels/altar-stone.glb" id="3_137ni"]
+[ext_resource type="PackedScene" uid="uid://bxt88ulyvcl7k" path="res://core/player/player.tscn" id="4_vcsq4"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vh0cj"]
+size = Vector3(2.1, 0.5, 1.3)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_j33lw"]
+size = Vector3(8, 3.49176, 0.2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dilkq"]
+size = Vector3(0.216095, 8.75392, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ga0h2"]
+size = Vector3(0.14529, 8.49454, 1)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="valla_hor2" parent="." instance=ExtResource("1_w0ps5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.57699, 0.00211883, 3.55222)
+
+[node name="iron-fence-border-curve2" parent="." instance=ExtResource("2_nw3se")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.56005, 0.00105941, 3.53981)
+
+[node name="valla_hor" parent="." instance=ExtResource("1_w0ps5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.57731, 0.00105941, 3.53981)
+
+[node name="altar-stone2" parent="." instance=ExtResource("3_137ni")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 6.58854, 0.0147735, 5.45851)
+
+[node name="valla_ver" parent="." instance=ExtResource("1_w0ps5")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.56756, 0.00211883, 4.522)
+
+[node name="player" parent="." instance=ExtResource("4_vcsq4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.662, 0.5, 4.553)
+
+[node name="valla_ver2" parent="." instance=ExtResource("1_w0ps5")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.57957, 0.00423765, 5.51511)
+
+[node name="valla_ver3" parent="." instance=ExtResource("1_w0ps5")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.59453, 0.0084753, 6.51693)
+
+[node name="valla_hor3" parent="." instance=ExtResource("1_w0ps5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.57668, 0.00317824, 3.56463)
+
+[node name="valla_hor4" parent="." instance=ExtResource("1_w0ps5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.57637, 0.00423765, 3.57704)
+
+[node name="valla_hor5" parent="." instance=ExtResource("1_w0ps5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.57606, 0.00529706, 3.58944)
+
+[node name="iron-fence-border-curve3" parent="." instance=ExtResource("2_nw3se")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 9.55539, 0.00211883, 3.58988)
+
+[node name="iron-fence-border-curve4" parent="." instance=ExtResource("2_nw3se")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.61555, 0.00211883, 7.52856)
+
+[node name="valla_ver4" parent="." instance=ExtResource("1_w0ps5")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 10.4566, 0.00211883, 4.48903)
+
+[node name="valla_ver5" parent="." instance=ExtResource("1_w0ps5")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 10.4686, 0.00423765, 5.48214)
+
+[node name="valla_ver6" parent="." instance=ExtResource("1_w0ps5")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 10.4835, 0.0084753, 6.48396)
+
+[node name="iron-fence-border-curve5" parent="." instance=ExtResource("2_nw3se")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 9.58564, 0.00211883, 7.50381)
+
+[node name="valla_hor6" parent="." instance=ExtResource("1_w0ps5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.55601, 0.00741589, 8.4142)
+
+[node name="valla_hor7" parent="." instance=ExtResource("1_w0ps5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.55569, 0.0084753, 8.42661)
+
+[node name="valla_hor8" parent="." instance=ExtResource("1_w0ps5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.55538, 0.00953472, 8.43901)
+
+[node name="valla_hor9" parent="." instance=ExtResource("1_w0ps5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.55507, 0.0105941, 8.45142)
+
+[node name="valla_hor10" parent="." instance=ExtResource("1_w0ps5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.57149, 0.0148318, 8.44699)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.57663, 0, 5.47161)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_vh0cj")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.82213, 0, 7.94512)
+fov = 101.25
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.62561, 0, 9.37693)
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.82213, 0, 3.11628)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0108852, 0.119843, -0.0357339)
+shape = SubResource("BoxShape3D_j33lw")
+
+[node name="StaticBody3D3" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.83302, 0.126038, 7.94525)
+shape = SubResource("BoxShape3D_j33lw")
+
+[node name="StaticBody3D4" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D4"]
+transform = Transform3D(1, 0, 0, 0, -0.21257, 0.977146, 0, -0.977146, -0.21257, 10.0397, 0.38402, 6.96344)
+shape = SubResource("BoxShape3D_dilkq")
+
+[node name="StaticBody3D5" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D5"]
+transform = Transform3D(1, 0, 0, 0, -0.21257, 0.977146, 0, -0.977146, -0.21257, 3.13674, 0.167942, 6.70133)
+shape = SubResource("BoxShape3D_ga0h2")
