@@ -7,6 +7,7 @@ const JUMP_VELOCITY = 4.5
 var current_anim = "idle"
 
 func _ready() -> void:
+	add_to_group("player")
 	change_anim(current_anim)
 
 

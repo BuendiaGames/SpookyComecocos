@@ -1,6 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://dab2jtp2kb4aa"]
+[gd_scene load_steps=9 format=3 uid="uid://dab2jtp2kb4aa"]
 
 [ext_resource type="PackedScene" uid="uid://62yf7c7xapgl" path="res://core/characters/ghost/ghost.tscn" id="1_e83xj"]
+[ext_resource type="PackedScene" uid="uid://do8u2iovjeolw" path="res://core/characters/vampire/vampire.tscn" id="3_uw2jf"]
+[ext_resource type="PackedScene" uid="uid://8qmusighjprr" path="res://core/objects/teletransporter.tscn" id="4_b7qot"]
 [ext_resource type="PackedScene" uid="uid://bxt88ulyvcl7k" path="res://core/player/player.tscn" id="6_qvnma"]
 
 [sub_resource type="Curve3D" id="Curve3D_n70jg"]
@@ -9,6 +11,16 @@ _data = {
 "tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0)
 }
 point_count = 8
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_kj7sr"]
+vertices = PackedVector3Array(-2.5, 0.5, -2.5, -2.5, 0.5, 2.5, 2.5, 0.5, 2.5, 2.5, 0.5, -2.5)
+polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1)]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vh0rv"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_rtx6b"]
+material = SubResource("StandardMaterial3D_vh0rv")
+size = Vector2(6, 6)
 
 [node name="Node3D" type="Node3D"]
 
@@ -19,7 +31,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.75781, 0, 1.73995)
 curve = SubResource("Curve3D_n70jg")
 
 [node name="pathfollower" type="PathFollow3D" parent="ghost_route"]
-transform = Transform3D(0.056513, 0, -0.998396, 0, 1, 0, 0.998396, 0, 0.056513, -1.16667, 0, -0.874999)
+transform = Transform3D(0.0565129, 0, -0.998394, 0, 1, 0, 0.998394, 0, 0.0565129, -1.16667, 0, -0.874999)
 
 [node name="ghost" parent="ghost_route/pathfollower" instance=ExtResource("1_e83xj")]
 transform = Transform3D(-1, 0, -8.74229e-08, 0, 1, 0, 8.74229e-08, 0, -1, 0, 0, 0)
@@ -28,3 +40,20 @@ transform = Transform3D(-1, 0, -8.74229e-08, 0, 1, 0, 8.74229e-08, 0, -1, 0, 0, 
 
 [node name="camera" type="Camera3D" parent="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 2.5, 2.86602)
+
+[node name="navigation_level" type="NavigationRegion3D" parent="."]
+navigation_mesh = SubResource("NavigationMesh_kj7sr")
+
+[node name="floor" type="MeshInstance3D" parent="navigation_level"]
+mesh = SubResource("PlaneMesh_rtx6b")
+
+[node name="vampire" parent="." instance=ExtResource("3_uw2jf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.30734, 0, 2.61569)
+
+[node name="teleporters" type="Node3D" parent="."]
+
+[node name="teletransporter" parent="teleporters" instance=ExtResource("4_b7qot")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.71196)
+
+[node name="teletransporter2" parent="teleporters" instance=ExtResource("4_b7qot")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.38253)

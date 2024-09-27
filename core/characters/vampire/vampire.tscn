@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://do8u2iovjeolw"]
+
+[ext_resource type="PackedScene" uid="uid://bo1vwecbannjf" path="res://3dmodels/character-vampire.glb" id="1_4rmuu"]
+[ext_resource type="Script" path="res://core/characters/vampire/vampire.gd" id="1_y7wq4"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_u33hn"]
+radius = 0.26
+height = 0.7
+
+[node name="vampire" type="CharacterBody3D"]
+script = ExtResource("1_y7wq4")
+
+[node name="main_mesh" parent="." instance=ExtResource("1_4rmuu")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="shape" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.421698, 0)
+shape = SubResource("CapsuleShape3D_u33hn")
+
+[node name="nav" type="NavigationAgent3D" parent="."]
+
+[node name="update_target" type="Timer" parent="."]
+autostart = true
+
+[node name="teleport" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="update_target" to="." method="_on_update_target_timeout"]
+[connection signal="timeout" from="teleport" to="." method="_on_teleport_timeout"]
