@@ -49,6 +49,7 @@ func change_anim(new_anim):
 func _on_area_3d_body_entered(body: Node3D) -> void:
 	if body.is_in_group("monstruos"):
 		print("PERDER PERDER PERDER")	
+		print(body.name)
 	
 
 func _on_area_3d_area_entered(area: Area3D) -> void:

@@ -44,7 +44,7 @@ _data = {
 
 [node name="key" type="Area3D"]
 
-[node name="key2" parent="." instance=ExtResource("1_w031o")]
+[node name="key2" parent="." groups=["llave"] instance=ExtResource("1_w031o")]
 
 [node name="shape" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.109028, 0)

@@ -9,6 +9,8 @@ radius = 0.146125
 height = 0.640898
 
 [node name="ghost" type="CharacterBody3D"]
+collision_layer = 2
+collision_mask = 2
 script = ExtResource("1_saw48")
 
 [node name="main_mesh" parent="." instance=ExtResource("1_q1mup")]
@@ -16,4 +18,3 @@ script = ExtResource("1_saw48")
 [node name="shape" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.449231, 0)
 shape = SubResource("CapsuleShape3D_3sra6")
-disabled = true
