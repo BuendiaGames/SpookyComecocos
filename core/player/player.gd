@@ -6,6 +6,8 @@ const JUMP_VELOCITY = 4.5
 
 var current_anim = "idle"
 
+var tiene_llave = false
+
 func _ready() -> void:
 	add_to_group("player")
 	change_anim(current_anim)
@@ -59,6 +61,7 @@ func _on_area_3d_area_entered(area: Area3D) -> void:
 	elif area.is_in_group("llave"):
 		print("UNA LLAVE")
 		area.queue_free()
-	else:
-		print("MAUSELO")
+		tiene_llave = true
+	elif area.name == "mausoleo" and tiene_llave:
+		print("HEMOS GANAO OLEEEEEEEEE")
 	
