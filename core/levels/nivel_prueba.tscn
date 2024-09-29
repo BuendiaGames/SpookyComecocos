@@ -31,7 +31,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.75781, 0, 1.73995)
 curve = SubResource("Curve3D_n70jg")
 
 [node name="pathfollower" type="PathFollow3D" parent="ghost_route"]
-transform = Transform3D(0.0565128, 0, -0.998394, 0, 1, 0, 0.998394, 0, 0.0565128, -1.16667, 0, -0.874999)
+transform = Transform3D(0.0565129, 0, -0.998394, 0, 1, 0, 0.998394, 0, 0.0565129, -1.16667, 0, -0.874999)
 
 [node name="ghost" parent="ghost_route/pathfollower" instance=ExtResource("1_e83xj")]
 transform = Transform3D(-1, 0, -8.74229e-08, 0, 1, 0, 8.74229e-08, 0, -1, 0, 0, 0)
