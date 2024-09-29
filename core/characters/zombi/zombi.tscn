@@ -7,11 +7,18 @@
 radius = 0.121862
 height = 0.784039
 
-[node name="CharacterBody3D" type="CharacterBody3D"]
+[node name="zombi" type="CharacterBody3D"]
 script = ExtResource("1_tq5wn")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.396765, 0)
 shape = SubResource("CapsuleShape3D_43hl5")
 
-[node name="character-zombie2" parent="." instance=ExtResource("1_4sxjl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.4, 0)
+[node name="main_mesh" parent="." instance=ExtResource("1_4sxjl")]
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+
+[node name="update_target" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="update_target" to="." method="_on_update_target_timeout"]
