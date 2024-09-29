@@ -17,6 +17,7 @@ var rng = RandomNumberGenerator.new()
 
 func _ready() -> void:
 	#Animacion
+	add_to_group("monstruos")
 	$model/AnimationPlayer.play("idle")
 
 func _process(delta: float) -> void:	

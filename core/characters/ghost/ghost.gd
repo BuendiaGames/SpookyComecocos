@@ -8,6 +8,7 @@ var ghostpath = null
 
 #Coger el pathfollow que es siempre el padre del fantasma
 func _ready() -> void:
+	add_to_group("monstruos")
 	ghostpath = get_parent()
 	$main_mesh/AnimationPlayer.play("walk")
 

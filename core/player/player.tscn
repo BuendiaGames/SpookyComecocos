@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://bxt88ulyvcl7k"]
+[gd_scene load_steps=5 format=3 uid="uid://bxt88ulyvcl7k"]
 
 [ext_resource type="Script" path="res://core/player/player.gd" id="1_evuen"]
 [ext_resource type="PackedScene" uid="uid://83ygvrrfnfh1" path="res://3dmodels/character-digger.glb" id="1_y2k6n"]
@@ -6,6 +6,10 @@
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ongd4"]
 radius = 0.132491
 height = 0.751309
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_tibbp"]
+radius = 0.259246
+height = 0.822986
 
 [node name="player" type="CharacterBody3D"]
 script = ExtResource("1_evuen")
@@ -15,3 +19,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00235605, 0.380007, 0)
 shape = SubResource("CapsuleShape3D_ongd4")
 
 [node name="model" parent="." instance=ExtResource("1_y2k6n")]
+
+[node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.406055, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("CapsuleShape3D_tibbp")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

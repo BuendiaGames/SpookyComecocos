@@ -8,6 +8,7 @@ var player = null
 
 #Coge las instancias del jugador y teletransprtadores
 func _ready() -> void:
+	add_to_group("monstruos")
 	player = get_tree().get_first_node_in_group("player")
 	$main_mesh/AnimationPlayer.play("walk")
 

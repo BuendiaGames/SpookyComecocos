@@ -42,3 +42,11 @@ func change_anim(new_anim):
 	if current_anim != new_anim:
 		current_anim = new_anim
 		$model/AnimationPlayer.play(new_anim)
+
+
+
+	# add_to_group("group_name") item.is_in_group("things") 
+func _on_area_3d_body_entered(body: Node3D) -> void:
+	if body.is_in_group("monstruos"):
+		print("PERDER PERDER PERDER")	
+	

@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://dbn2p7pxwmtmp"]
+[gd_scene load_steps=18 format=3 uid="uid://dbn2p7pxwmtmp"]
 
 [ext_resource type="PackedScene" uid="uid://ftboyhub4agj" path="res://3dmodels/iron-fence-border.glb" id="1_w0ps5"]
 [ext_resource type="PackedScene" uid="uid://cc4acm4ynfxt7" path="res://3dmodels/iron-fence-border-curve.glb" id="2_nw3se"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://8qmusighjprr" path="res://core/objects/teletransporter.tscn" id="6_02quu"]
 [ext_resource type="PackedScene" uid="uid://62yf7c7xapgl" path="res://core/characters/ghost/ghost.tscn" id="7_0jimo"]
 [ext_resource type="PackedScene" uid="uid://b6jhmxs5usgca" path="res://core/characters/zombi/zombi.tscn" id="8_2vg7y"]
+[ext_resource type="PackedScene" uid="uid://brracca53ddlb" path="res://core/characters/skeleton/skeleton.tscn" id="9_8h6sy"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_vh0cj"]
 size = Vector3(2.1, 0.5, 1.3)
@@ -182,5 +183,8 @@ transform = Transform3D(1, 0, 0, 0, 0.555498, 0.831518, 0, -0.831518, 0.555498, 
 light_color = Color(0.711229, 0.586761, 0.783049, 1)
 light_energy = 0.5
 
-[node name="CharacterBody3D" parent="." instance=ExtResource("8_2vg7y")]
+[node name="zombi" parent="." instance=ExtResource("8_2vg7y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.89266, 0.0966967, 5.0968)
+
+[node name="skeleton" parent="." instance=ExtResource("9_8h6sy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.36809, 0.0693347, 6.77169)

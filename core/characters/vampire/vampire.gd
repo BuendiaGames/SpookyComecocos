@@ -20,6 +20,7 @@ const resume_time = 1.0
 
 #Coge las instancias del jugador y teletransprtadores
 func _ready() -> void:
+	add_to_group("monstruos")
 	player = get_tree().get_first_node_in_group("player")
 	teleporters = get_tree().get_nodes_in_group("teleporters")
 	$main_mesh/AnimationPlayer.play("walk")
