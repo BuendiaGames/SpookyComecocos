@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://4qt40ps32pyy"]
+
+[ext_resource type="PackedScene" uid="uid://b0bcui387vjx6" path="res://3dmodels/lightpost-all.glb" id="1_pmovc"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j26wo"]
+albedo_color = Color(1, 0.690667, 0.36, 1)
+emission_enabled = true
+emission = Color(0.62912, 0.64, 0.3136, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_xxk8v"]
+material = SubResource("StandardMaterial3D_j26wo")
+size = Vector3(0.1, 0.2, 0.1)
+
+[node name="lightpost-all2" instance=ExtResource("1_pmovc")]
+
+[node name="mesh" type="MeshInstance3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.08986, 0.237677)
+mesh = SubResource("BoxMesh_xxk8v")
+
+[node name="mesh2" type="MeshInstance3D" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.08986, -0.236804)
+mesh = SubResource("BoxMesh_xxk8v")
+
+[node name="mesh3" type="MeshInstance3D" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.237803, 1.09, 0)
+mesh = SubResource("BoxMesh_xxk8v")
+
+[node name="mesh4" type="MeshInstance3D" parent="." index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.238519, 1.09, 0)
+mesh = SubResource("BoxMesh_xxk8v")

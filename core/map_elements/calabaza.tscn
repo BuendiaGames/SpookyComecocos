@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://byfaidmesrak6"]
+
+[ext_resource type="PackedScene" uid="uid://cpwnk36r5n0xm" path="res://3dmodels/pumpkin-carved.glb" id="1_vry36"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oj1p2"]
+albedo_color = Color(1, 0.690667, 0.36, 1)
+emission_enabled = true
+emission = Color(0.62912, 0.64, 0.3136, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ttdum"]
+material = SubResource("StandardMaterial3D_oj1p2")
+size = Vector3(0.1, 0.1, 0.1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_171pj"]
+material = SubResource("StandardMaterial3D_oj1p2")
+size = Vector3(0.13, 0.05, 0.1)
+
+[node name="pumpkin-carved2" instance=ExtResource("1_vry36")]
+
+[node name="mesh" type="MeshInstance3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0786308, 0.0722368)
+mesh = SubResource("BoxMesh_ttdum")
+
+[node name="mesh2" type="MeshInstance3D" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0727902, 0.0880992)
+mesh = SubResource("BoxMesh_171pj")

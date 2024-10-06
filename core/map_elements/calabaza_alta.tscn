@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://v4mok126f2xg"]
+
+[ext_resource type="PackedScene" uid="uid://dgl621sty4ipv" path="res://3dmodels/pumpkin-tall-carved.glb" id="1_dusmh"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_23wss"]
+size = Vector3(0.1, 0.1, 0.12)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s5nu2"]
+albedo_color = Color(0.83, 0.632183, 0.2905, 1)
+emission_enabled = true
+emission = Color(0.67, 0.67, 0.2412, 1)
+
+[node name="pumpkin-tall-carved2" instance=ExtResource("1_dusmh")]
+
+[node name="mesh" type="MeshInstance3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.9893, 0.145893, 0, -0.145893, 0.9893, 0, 0.107551, 0.0395422)
+mesh = SubResource("BoxMesh_23wss")
+surface_material_override/0 = SubResource("StandardMaterial3D_s5nu2")
