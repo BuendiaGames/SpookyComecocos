@@ -1,0 +1,251 @@
+[gd_scene load_steps=6 format=3 uid="uid://biibogixogake"]
+
+[ext_resource type="PackedScene" uid="uid://ftboyhub4agj" path="res://3dmodels/iron-fence-border.glb" id="1_oyn0n"]
+[ext_resource type="PackedScene" uid="uid://cc4acm4ynfxt7" path="res://3dmodels/iron-fence-border-curve.glb" id="2_wgod8"]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_xk3ba"]
+vertices = PackedVector3Array(6.54809, 0.426271, 8.49996, 6.54809, 0.426271, 6.99996, 4.54809, 0.426271, 6.74996, 2.79809, 0.426271, 8.49996, 4.54809, 0.426271, 4.24996, 2.79809, 0.426271, 2.49996, 6.54809, 0.426271, 3.99996, 6.54809, 0.426271, 2.49996, 8.29809, 0.426271, 6.74996, 10.7981, 0.426271, 8.49996, 8.29809, 0.426271, 4.24996, 10.7981, 0.426271, 2.49996, 5.54809, 1.17627, 4.99996, 5.54809, 1.17627, 5.99996, 7.29809, 1.17627, 5.99996, 7.29809, 1.17627, 4.99996)
+polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 3), PackedInt32Array(2, 3, 4), PackedInt32Array(4, 3, 5), PackedInt32Array(6, 4, 7), PackedInt32Array(7, 4, 5), PackedInt32Array(1, 8, 0), PackedInt32Array(0, 8, 9), PackedInt32Array(6, 7, 10), PackedInt32Array(10, 7, 11), PackedInt32Array(10, 11, 8), PackedInt32Array(8, 11, 9), PackedInt32Array(15, 14, 12), PackedInt32Array(12, 14, 13)]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_xswj1"]
+size = Vector2(100, 100)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ifwaa"]
+size = Vector3(2.5, 1, 1.76)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="escenario" type="Node3D" parent="."]
+
+[node name="muroarriba" type="Node3D" parent="escenario"]
+
+[node name="iron-fence-border2" parent="escenario/muroarriba" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0)
+
+[node name="iron-fence-border3" parent="escenario/muroarriba" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 0)
+
+[node name="iron-fence-border4" parent="escenario/muroarriba" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 0)
+
+[node name="iron-fence-border5" parent="escenario/muroarriba" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 0)
+
+[node name="iron-fence-border6" parent="escenario/muroarriba" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 0)
+
+[node name="iron-fence-border7" parent="escenario/muroarriba" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, 0)
+
+[node name="iron-fence-border8" parent="escenario/muroarriba" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 0)
+
+[node name="iron-fence-border9" parent="escenario/muroarriba" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, 0)
+
+[node name="iron-fence-border10" parent="escenario/muroarriba" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, 0)
+
+[node name="iron-fence-border11" parent="escenario/muroarriba" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, 0)
+
+[node name="iron-fence-border12" parent="escenario/muroarriba" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, 0)
+
+[node name="iron-fence-border13" parent="escenario/muroarriba" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, 0)
+
+[node name="iron-fence-border14" parent="escenario/muroarriba" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 0)
+
+[node name="iron-fence-border15" parent="escenario/muroarriba" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19, 0, 0)
+
+[node name="iron-fence-border16" parent="escenario/muroarriba" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 0)
+
+[node name="iron-fence-border17" parent="escenario/muroarriba" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 0, 0)
+
+[node name="iron-fence-border18" parent="escenario/muroarriba" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 0, 0)
+
+[node name="iron-fence-border19" parent="escenario/muroarriba" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23, 0, 0)
+
+[node name="iron-fence-border20" parent="escenario/muroarriba" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, 0)
+
+[node name="iron-fence-border21" parent="escenario/muroarriba" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25, 0, 0)
+
+[node name="iron-fence-border22" parent="escenario/muroarriba" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 26, 0, 1)
+
+[node name="iron-fence-border23" parent="escenario/muroarriba" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 26, 0, 2)
+
+[node name="iron-fence-border24" parent="escenario/muroarriba" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 28, 0, 3)
+
+[node name="iron-fence-border25" parent="escenario/muroarriba" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 29, 0, 3)
+
+[node name="iron-fence-border26" parent="escenario/muroarriba" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 30, 0, 3)
+
+[node name="iron-fence-border27" parent="escenario/muroarriba" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 31, 0, 3)
+
+[node name="iron-fence-border28" parent="escenario/muroarriba" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 32, 0, 3)
+
+[node name="iron-fence-border29" parent="escenario/muroarriba" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 33, 0, 3)
+
+[node name="iron-fence-border30" parent="escenario/muroarriba" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 34, 0, 3)
+
+[node name="iron-fence-border31" parent="escenario/muroarriba" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 35, 0, 3)
+
+[node name="iron-fence-border32" parent="escenario/muroarriba" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 36, 0, 3)
+
+[node name="iron-fence-border33" parent="escenario/muroarriba" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 37, 0, 3)
+
+[node name="iron-fence-border34" parent="escenario/muroarriba" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 38, 0, 3)
+
+[node name="iron-fence-border35" parent="escenario/muroarriba" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 39, 0, 3)
+
+[node name="iron-fence-border36" parent="escenario/muroarriba" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 40, 0, 3)
+
+[node name="iron-fence-border37" parent="escenario/muroarriba" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 41, 0, 3)
+
+[node name="iron-fence-border38" parent="escenario/muroarriba" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 42, 0, 3)
+
+[node name="iron-fence-border39" parent="escenario/muroarriba" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 43, 0, 3)
+
+[node name="iron-fence-border40" parent="escenario/muroarriba" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 44, 0, 3)
+
+[node name="iron-fence-border-curve2" parent="escenario/muroarriba" instance=ExtResource("2_wgod8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0)
+
+[node name="iron-fence-border-curve3" parent="escenario/muroarriba" instance=ExtResource("2_wgod8")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 26, 0, 0)
+
+[node name="iron-fence-border-curve5" parent="escenario/muroarriba" instance=ExtResource("2_wgod8")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 45, 0, 4)
+
+[node name="iron-fence-border-curve4" parent="escenario/muroarriba" instance=ExtResource("2_wgod8")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 27, 0, 3)
+
+[node name="muroderecha" type="Node3D" parent="escenario"]
+
+[node name="iron-fence-border41" parent="escenario/muroderecha" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 45, 0, 5)
+
+[node name="iron-fence-border42" parent="escenario/muroderecha" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 45, 0, 6)
+
+[node name="iron-fence-border43" parent="escenario/muroderecha" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 45, 0, 7)
+
+[node name="iron-fence-border44" parent="escenario/muroderecha" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 45, 0, 8)
+
+[node name="iron-fence-border45" parent="escenario/muroderecha" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 45, 0, 9)
+
+[node name="iron-fence-border46" parent="escenario/muroderecha" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 45, 0, 10)
+
+[node name="iron-fence-border47" parent="escenario/muroderecha" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 45, 0, 11)
+
+[node name="iron-fence-border48" parent="escenario/muroderecha" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 45, 0, 12)
+
+[node name="iron-fence-border49" parent="escenario/muroderecha" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 45, 0, 13)
+
+[node name="iron-fence-border50" parent="escenario/muroderecha" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 45, 0, 14)
+
+[node name="iron-fence-border54" parent="escenario/muroderecha" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 50, 0, 17)
+
+[node name="iron-fence-border55" parent="escenario/muroderecha" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 50, 0, 18)
+
+[node name="iron-fence-border56" parent="escenario/muroderecha" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 50, 0, 19)
+
+[node name="iron-fence-border57" parent="escenario/muroderecha" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 50, 0, 20)
+
+[node name="iron-fence-border58" parent="escenario/muroderecha" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 50, 0, 21)
+
+[node name="iron-fence-border59" parent="escenario/muroderecha" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 50, 0, 22)
+
+[node name="iron-fence-border60" parent="escenario/muroderecha" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 50, 0, 23)
+
+[node name="iron-fence-border61" parent="escenario/muroderecha" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 50, 0, 24)
+
+[node name="iron-fence-border51" parent="escenario/muroderecha" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 47, 0, 15)
+
+[node name="iron-fence-border52" parent="escenario/muroderecha" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 48, 0, 15)
+
+[node name="iron-fence-border53" parent="escenario/muroderecha" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 49, 0, 15)
+
+[node name="iron-fence-border-curve6" parent="escenario/muroderecha" instance=ExtResource("2_wgod8")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 46, 0, 15)
+
+[node name="iron-fence-border62" parent="escenario/muroderecha" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 48, 0, 25)
+
+[node name="iron-fence-border63" parent="escenario/muroderecha" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 49, 0, 25)
+
+[node name="iron-fence-border-curve9" parent="escenario/muroderecha" instance=ExtResource("2_wgod8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47, 0, 26)
+
+[node name="iron-fence-border-curve7" parent="escenario/muroderecha" instance=ExtResource("2_wgod8")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 50, 0, 16)
+
+[node name="iron-fence-border-curve8" parent="escenario/muroderecha" instance=ExtResource("2_wgod8")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 50, 0, 25)
+
+[node name="muroizquierda" type="Node3D" parent="escenario"]
+
+[node name="muroabajo" type="Node3D" parent="escenario"]
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
+visible = false
+navigation_mesh = SubResource("NavigationMesh_xk3ba")
+
+[node name="suelo" type="MeshInstance3D" parent="NavigationRegion3D"]
+mesh = SubResource("PlaneMesh_xswj1")
+skeleton = NodePath("../..")
+
+[node name="paredes" type="MeshInstance3D" parent="NavigationRegion3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.53432, 0.176271, 5.48305)
+mesh = SubResource("BoxMesh_ifwaa")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 75.8403, 12.7697, 13.7583)
