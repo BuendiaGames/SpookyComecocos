@@ -1,8 +1,8 @@
-[gd_scene load_steps=22 format=3 uid="uid://dbn2p7pxwmtmp"]
+[gd_scene load_steps=19 format=3 uid="uid://dbn2p7pxwmtmp"]
 
 [ext_resource type="PackedScene" uid="uid://ftboyhub4agj" path="res://3dmodels/iron-fence-border.glb" id="1_w0ps5"]
 [ext_resource type="PackedScene" uid="uid://cc4acm4ynfxt7" path="res://3dmodels/iron-fence-border-curve.glb" id="2_nw3se"]
-[ext_resource type="PackedScene" uid="uid://fbyadc334qwp" path="res://core/map_elements/mausoleo.tscn" id="4_pntdf"]
+[ext_resource type="PackedScene" uid="uid://bhx7gr4poe1vx" path="res://3dmodels/altar-stone.glb" id="3_137ni"]
 [ext_resource type="PackedScene" uid="uid://bxt88ulyvcl7k" path="res://core/player/player.tscn" id="4_vcsq4"]
 [ext_resource type="PackedScene" uid="uid://do8u2iovjeolw" path="res://core/characters/vampire/vampire.tscn" id="5_7ep8m"]
 [ext_resource type="PackedScene" uid="uid://8qmusighjprr" path="res://core/objects/teletransporter.tscn" id="6_02quu"]
@@ -10,7 +10,6 @@
 [ext_resource type="PackedScene" uid="uid://b6jhmxs5usgca" path="res://core/characters/zombi/zombi.tscn" id="8_2vg7y"]
 [ext_resource type="PackedScene" uid="uid://brracca53ddlb" path="res://core/characters/skeleton/skeleton.tscn" id="9_8h6sy"]
 [ext_resource type="PackedScene" uid="uid://i8evkc74g76n" path="res://core/objects/calabaza.tscn" id="10_gvcv5"]
-[ext_resource type="PackedScene" uid="uid://0g1yokwjdysh" path="res://core/map_elements/farol.tscn" id="11_x5or3"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_vh0cj"]
 size = Vector3(2.1, 0.5, 1.3)
@@ -41,19 +40,6 @@ _data = {
 }
 point_count = 11
 
-[sub_resource type="Environment" id="Environment_wi1m4"]
-background_mode = 1
-background_color = Color(0.0288, 0.0288, 0.18, 1)
-fog_enabled = true
-fog_light_color = Color(0.196921, 0.0994695, 0.0958176, 1)
-fog_density = 0.1
-volumetric_fog_density = 1.0
-volumetric_fog_albedo = Color(0.6, 0.31, 0, 1)
-volumetric_fog_emission = Color(0.767294, 0.208013, 0.183415, 1)
-volumetric_fog_emission_energy = 5.0
-
-[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_54424"]
-
 [node name="Node3D" type="Node3D"]
 
 [node name="player" parent="." instance=ExtResource("4_vcsq4")]
@@ -72,6 +58,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.56005, 0.00105941, 3.53981)
 
 [node name="valla_hor" parent="escenario" instance=ExtResource("1_w0ps5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.57731, 0.00105941, 3.53981)
+
+[node name="altar-stone2" parent="escenario" instance=ExtResource("3_137ni")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 6.58854, 0.0147735, 5.45851)
 
 [node name="valla_ver" parent="escenario" instance=ExtResource("1_w0ps5")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.56756, 0.00211883, 4.522)
@@ -188,15 +177,11 @@ transform = Transform3D(-0.945814, 0, 0.324682, 0, 1, 0, -0.324682, 0, -0.945814
 [node name="ghost" parent="ghost_route/pathfollower" instance=ExtResource("7_0jimo")]
 transform = Transform3D(-1, 0, -8.74229e-08, 0, 1, 0, 8.74229e-08, 0, -1, 0, 0, 0)
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_wi1m4")
-camera_attributes = SubResource("CameraAttributesPractical_54424")
-
 [node name="lights" type="Node3D" parent="."]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="lights"]
-transform = Transform3D(1, 0, 0, 0, 0.95057, 0.310511, 0, -0.310511, 0.95057, 5.99757, 8.08836, 22.0291)
-light_color = Color(0.53, 0.561333, 1, 1)
+transform = Transform3D(1, 0, 0, 0, 0.555498, 0.831518, 0, -0.831518, 0.555498, 6.62561, 7.68631, 12.4515)
+light_color = Color(0.711229, 0.586761, 0.783049, 1)
 light_energy = 0.5
 
 [node name="zombi" parent="." instance=ExtResource("8_2vg7y")]
@@ -207,9 +192,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.36809, 0.0693347, 6.77169)
 
 [node name="pumpkin" parent="." instance=ExtResource("10_gvcv5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.55727, 0.118887, 6.94799)
-
-[node name="mausoleo" parent="." instance=ExtResource("4_pntdf")]
-transform = Transform3D(-6.55671e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.55671e-08, 6.58677, 0.0389261, 5.27488)
-
-[node name="farol" parent="." instance=ExtResource("11_x5or3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 7)
