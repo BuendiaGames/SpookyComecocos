@@ -8,7 +8,11 @@ var current_anim = "idle"
 
 var tiene_llave = false
 
+var nodo_ui = null
+
 func _ready() -> void:
+	nodo_ui = get_tree().get_first_node_in_group("nodo_ui")
+	
 	add_to_group("player")
 	change_anim(current_anim)
 
@@ -54,7 +58,7 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 
 func _on_area_3d_area_entered(area: Area3D) -> void:
 	if area.is_in_group("calabazas"):
-		print("UNA CALABAZA")
+		GameManager.collect_pumpkin()
 		area.queue_free()
 	elif area.is_in_group("llave"):
 		print("UNA LLAVE")

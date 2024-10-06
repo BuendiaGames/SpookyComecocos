@@ -16,11 +16,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-PhantomCameraManager="*res://addons/phantom_camera/scripts/managers/phantom_camera_manager.gd"
-
-[editor_plugins]
-
-enabled=PackedStringArray("res://addons/phantom_camera/plugin.cfg")
+GameManager="*res://core/globals/GameManager.gd"
 
 [rendering]
 

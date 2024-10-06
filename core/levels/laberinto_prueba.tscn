@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://dbn2p7pxwmtmp"]
+[gd_scene load_steps=21 format=3 uid="uid://dbn2p7pxwmtmp"]
 
 [ext_resource type="PackedScene" uid="uid://ftboyhub4agj" path="res://3dmodels/iron-fence-border.glb" id="1_w0ps5"]
 [ext_resource type="PackedScene" uid="uid://cc4acm4ynfxt7" path="res://3dmodels/iron-fence-border-curve.glb" id="2_nw3se"]
@@ -10,6 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://b6jhmxs5usgca" path="res://core/characters/zombi/zombi.tscn" id="8_2vg7y"]
 [ext_resource type="PackedScene" uid="uid://brracca53ddlb" path="res://core/characters/skeleton/skeleton.tscn" id="9_8h6sy"]
 [ext_resource type="PackedScene" uid="uid://i8evkc74g76n" path="res://core/objects/calabaza.tscn" id="10_gvcv5"]
+[ext_resource type="PackedScene" uid="uid://0g1yokwjdysh" path="res://core/map_elements/farol.tscn" id="11_x5or3"]
+[ext_resource type="PackedScene" uid="uid://dceipods5me4p" path="res://core/ui/ui.tscn" id="12_nep8g"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_vh0cj"]
 size = Vector3(2.1, 0.5, 1.3)
@@ -192,3 +194,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.36809, 0.0693347, 6.77169)
 
 [node name="pumpkin" parent="." instance=ExtResource("10_gvcv5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.55727, 0.118887, 6.94799)
+
+[node name="pumpkin2" parent="." instance=ExtResource("10_gvcv5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.36863, 0.118887, 6.94799)
+
+[node name="pumpkin3" parent="." instance=ExtResource("10_gvcv5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.36863, 0.118887, 4.05836)
+
+[node name="farol" parent="." instance=ExtResource("11_x5or3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 7)
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="UI" parent="UI" instance=ExtResource("12_nep8g")]

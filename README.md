@@ -15,3 +15,7 @@ Comecocos spooky.
   - Vampiro: Teletransportarse entre ataudes o tumbas (con cool down antes de teletransportarse) y te persigue inteligentemente.
   - Zombi: Te persigue sin más.
 - hacer el mapa.
+
+## Creditos
+
+Fuente de texto: BabyHalloween por Projecttype https://www.creativefabrica.com/designer/projectype/
