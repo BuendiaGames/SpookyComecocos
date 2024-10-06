@@ -547,6 +547,36 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 10, 0,
 [node name="iron-fence-border86" parent="escenario/muroabajo" instance=ExtResource("1_oyn0n")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 10, 0, 40)
 
+[node name="obstaculos" type="Node3D" parent="escenario"]
+
+[node name="columnas" type="Node3D" parent="escenario"]
+
+[node name="circulovallas" type="Node3D" parent="escenario"]
+
+[node name="iron-fence-border41" parent="escenario/circulovallas" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+
+[node name="iron-fence-border42" parent="escenario/circulovallas" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1, 0, 0)
+
+[node name="iron-fence-border44" parent="escenario/circulovallas" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1, 0, 0)
+
+[node name="iron-fence-border43" parent="escenario/circulovallas" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 1)
+
+[node name="iron-fence-border-curve6" parent="escenario/circulovallas" instance=ExtResource("2_wgod8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -1)
+
+[node name="iron-fence-border-curve7" parent="escenario/circulovallas" instance=ExtResource("2_wgod8")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1, 0, -1)
+
+[node name="iron-fence-border-curve8" parent="escenario/circulovallas" instance=ExtResource("2_wgod8")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1, 0, 1)
+
+[node name="iron-fence-border-curve9" parent="escenario/circulovallas" instance=ExtResource("2_wgod8")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1, 0, 1)
+
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
 visible = false
 navigation_mesh = SubResource("NavigationMesh_xk3ba")
