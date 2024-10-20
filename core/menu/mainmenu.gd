@@ -11,7 +11,7 @@ func _process(delta: float) -> void:
 
 func _on_start_pressed() -> void:
 	#GameManager.load_game("res://core/levels/nivel1.tscn")
-	GameManager.load_game("res://core/levels/laberinto_prueba.tscn")
+	GameManager.load_game("res://core/levels/nivel1.tscn")
 
 func _on_credits_pressed() -> void:
 	$backgroundtext/columns/center/start.hide()
