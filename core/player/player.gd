@@ -65,4 +65,6 @@ func _on_area_3d_area_entered(area: Area3D) -> void:
 	elif area.is_in_group("llave"):
 		area.queue_free()
 		tiene_llave = true
+		var mausoleito = get_tree().get_first_node_in_group("mausoleos")
+		mausoleito.abrir_y_cerrar_puerta()
 		nodo_ui.show_key()

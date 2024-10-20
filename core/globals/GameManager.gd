@@ -40,3 +40,4 @@ func defeat():
 func resetear_valores():
 	collected_pumpkins = 0
 	tiempo = 0
+	
