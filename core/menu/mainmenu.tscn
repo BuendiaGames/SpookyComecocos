@@ -41,11 +41,19 @@ alignment = 1
 [node name="start" type="Button" parent="backgroundtext/columns/center"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_fyu4g")
+theme_override_font_sizes/font_size = 30
 text = "Start game"
+
+[node name="howtoplay" type="Button" parent="backgroundtext/columns/center"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_fyu4g")
+theme_override_font_sizes/font_size = 30
+text = "how to play"
 
 [node name="credits" type="Button" parent="backgroundtext/columns/center"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_fyu4g")
+theme_override_font_sizes/font_size = 30
 text = "Credits"
 
 [node name="credits_text" type="RichTextLabel" parent="backgroundtext/columns/center"]
@@ -69,6 +77,20 @@ Babyhalloween by Project type[/center]
 "
 fit_content = true
 
+[node name="howtoplay_text" type="RichTextLabel" parent="backgroundtext/columns/center"]
+visible = false
+layout_mode = 2
+bbcode_enabled = true
+text = "[center][b]HOW TO PLAY[/b]
+
+[b]WHAT TO DO[/b]
+You have to get the key and get to the mausoleum to scape from the graveyard while obtaining as many pumpkins as you can.
+¡Be careful not to get caught by the monsters!
+
+[b]CONTROLS[/b]
+Use the directional arrows or WASD to move the character around."
+fit_content = true
+
 [node name="back" type="Button" parent="backgroundtext/columns/center"]
 visible = false
 layout_mode = 2
@@ -82,5 +104,6 @@ size_flags_horizontal = 3
 [node name="Timer" type="Timer" parent="."]
 
 [connection signal="pressed" from="backgroundtext/columns/center/start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="backgroundtext/columns/center/howtoplay" to="." method="_on_howtoplay_pressed"]
 [connection signal="pressed" from="backgroundtext/columns/center/credits" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="backgroundtext/columns/center/back" to="." method="_on_back_pressed"]
