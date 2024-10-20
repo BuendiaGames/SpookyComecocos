@@ -584,11 +584,23 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 10, 0,
 [node name="altar-stone2" parent="escenario/obstaculos" instance=ExtResource("3_5hdl6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.8771, 0, 14.4262)
 
+[node name="altar-stone3" parent="escenario/obstaculos" instance=ExtResource("3_5hdl6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.0656, 0, 27.1776)
+
 [node name="altar-wood2" parent="escenario/obstaculos" instance=ExtResource("4_5k6xs")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.4363, 0, 18.7385)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.70865, 0, 14.7716)
+
+[node name="altar-wood3" parent="escenario/obstaculos" instance=ExtResource("4_5k6xs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.6837, 0, 34.7916)
 
 [node name="coffin-old2" parent="escenario/obstaculos" instance=ExtResource("5_guuwk")]
 transform = Transform3D(-0.00624427, 0.0356844, -0.999344, 0.000222965, 0.999363, 0.0356837, 0.99998, 0, -0.00624825, 2.30518, 0, 21.0466)
+
+[node name="coffin-old4" parent="escenario/obstaculos" instance=ExtResource("5_guuwk")]
+transform = Transform3D(-0.00624427, 0.0356844, -0.999344, 0.000222965, 0.999363, 0.0356837, 0.99998, 0, -0.00624825, 38.5931, 0, 22.9264)
+
+[node name="coffin-old3" parent="escenario/obstaculos" instance=ExtResource("5_guuwk")]
+transform = Transform3D(0.999999, 0, 0, 0, 1, 0, 0, 0, 1, 19.7255, 0, 27.6691)
 
 [node name="coffin2" parent="escenario/obstaculos" instance=ExtResource("6_84hw1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.7023, 0, 11.5087)
@@ -601,6 +613,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.7023, 0, 11.5087)
 
 [node name="cross-wood2" parent="escenario/obstaculos" instance=ExtResource("7_ivsa4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.25918, 0, 21.0085)
+
+[node name="cross-wood4" parent="escenario/obstaculos" instance=ExtResource("7_ivsa4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.6075, 0, 33.7896)
+
+[node name="cross-wood3" parent="escenario/obstaculos" instance=ExtResource("7_ivsa4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.8831, 0, 34.3454)
 
 [node name="cross2" parent="escenario/obstaculos" instance=ExtResource("8_ud2ke")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.6761, 0, 10.6632)
@@ -615,37 +633,94 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41, 0, 13)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42.4027, 0, 12.9582)
 
 [node name="gravestone-bevel2" parent="escenario/obstaculos" instance=ExtResource("12_3idl5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.2363, 0, 23.1497)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.9102, 0, 15.3294)
+
+[node name="gravestone-bevel5" parent="escenario/obstaculos" instance=ExtResource("12_3idl5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.0127, 0, 32.026)
+
+[node name="gravestone-bevel3" parent="escenario/obstaculos" instance=ExtResource("12_3idl5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.5955, 0, 24.5027)
 
 [node name="gravestone-broken2" parent="escenario/obstaculos" instance=ExtResource("13_rfihf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.0423, 0, 22.5631)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.49568, 0, 14.8327)
+
+[node name="gravestone-broken3" parent="escenario/obstaculos" instance=ExtResource("13_rfihf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2632, 0, 34.2987)
 
 [node name="gravestone-cross-large2" parent="escenario/obstaculos" instance=ExtResource("14_gxurx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.1959, 0, 15.4902)
+
+[node name="gravestone-cross-large7" parent="escenario/obstaculos" instance=ExtResource("14_gxurx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.2665, 0, 23.9117)
+
+[node name="gravestone-cross-large4" parent="escenario/obstaculos" instance=ExtResource("14_gxurx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.59978, 0, 14.6626)
+
+[node name="gravestone-cross-large6" parent="escenario/obstaculos" instance=ExtResource("14_gxurx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.3675, 0, 24.5798)
+
+[node name="gravestone-cross-large3" parent="escenario/obstaculos" instance=ExtResource("14_gxurx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.77747, 0, 16.3544)
+
+[node name="gravestone-cross-large11" parent="escenario/obstaculos" instance=ExtResource("14_gxurx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.2889, 0, 34.3102)
+
+[node name="gravestone-cross-large9" parent="escenario/obstaculos" instance=ExtResource("14_gxurx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.93175, 0, 32.0076)
+
+[node name="gravestone-cross-large10" parent="escenario/obstaculos" instance=ExtResource("14_gxurx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.0533, 0, 33.288)
+
+[node name="gravestone-cross-large5" parent="escenario/obstaculos" instance=ExtResource("14_gxurx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.508, 0, 26.7653)
 
 [node name="gravestone-cross2" parent="escenario/obstaculos" instance=ExtResource("15_v5wpk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.7167, 0, 10.4935)
 
 [node name="gravestone-debris2" parent="escenario/obstaculos" instance=ExtResource("16_hb735")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.4401, 0, 22.2051)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.79018, 0, 17.6083)
+
+[node name="gravestone-debris3" parent="escenario/obstaculos" instance=ExtResource("16_hb735")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.85906, 0, 33.4227)
 
 [node name="gravestone-decorative2" parent="escenario/obstaculos" instance=ExtResource("17_5ydxr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.2377, 0, 20.3418)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.87442, 0, 15.8994)
+
+[node name="gravestone-decorative3" parent="escenario/obstaculos" instance=ExtResource("17_5ydxr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.7175, 0, 15.8994)
 
 [node name="gravestone-flat-open2" parent="escenario/obstaculos" instance=ExtResource("18_0q5ax")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.0875, 0, 16.8265)
 
 [node name="gravestone-flat2" parent="escenario/obstaculos" instance=ExtResource("19_w7j57")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.9517, 0, 18.7571)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.7354, 0, 17.4567)
 
 [node name="gravestone-roof2" parent="escenario/obstaculos" instance=ExtResource("20_xpg5v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.5141, 0, 16.6058)
 
+[node name="gravestone-roof3" parent="escenario/obstaculos" instance=ExtResource("20_xpg5v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5115, 0, 33.5169)
+
 [node name="gravestone-round2" parent="escenario/obstaculos" instance=ExtResource("21_ljqjx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.9069, 0, 17.7165)
 
+[node name="gravestone-round3" parent="escenario/obstaculos" instance=ExtResource("21_ljqjx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.0981, 0, 34.3131)
+
 [node name="gravestone-wide2" parent="escenario/obstaculos" instance=ExtResource("22_737gp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.9215, 0, 23.5305)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.60238, 0, 16.2054)
+
+[node name="gravestone-wide4" parent="escenario/obstaculos" instance=ExtResource("22_737gp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2259, 0, 32.0198)
+
+[node name="gravestone-wide5" parent="escenario/obstaculos" instance=ExtResource("22_737gp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.7177, 0, 39.7657)
+
+[node name="gravestone-bevel6" parent="escenario/obstaculos" instance=ExtResource("12_3idl5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.3399, 0, 33.2223)
+
+[node name="gravestone-wide3" parent="escenario/obstaculos" instance=ExtResource("22_737gp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.9675, 0, 22.5396)
 
 [node name="hay-bale-bundled2" parent="escenario/obstaculos" instance=ExtResource("23_ufwog")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.6091, 0, 17.931)
@@ -654,7 +729,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.6091, 0, 17.931)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.4549, 0, 17.1308)
 
 [node name="pillar-square2" parent="escenario/obstaculos" instance=ExtResource("25_ajivo")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.787, 0, 22.4984)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.81631, 0, 17.6479)
 
 [node name="pine-crooked2" parent="escenario/obstaculos" instance=ExtResource("26_ngn27")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5238, 0, 8.55713)
@@ -701,6 +776,78 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.1307, 0, 4.53071)
 [node name="pine5" parent="escenario/obstaculos" instance=ExtResource("27_3jeyx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.0766, 0, 3.53633)
 
+[node name="pine-crooked12" parent="escenario/obstaculos" instance=ExtResource("26_ngn27")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.8842, 0, 22.3463)
+
+[node name="pine-crooked13" parent="escenario/obstaculos" instance=ExtResource("26_ngn27")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.8842, 0, 24.4563)
+
+[node name="pine-crooked17" parent="escenario/obstaculos" instance=ExtResource("26_ngn27")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.3472, 0, 26.1683)
+
+[node name="pine-crooked15" parent="escenario/obstaculos" instance=ExtResource("26_ngn27")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.9397, 0, 22.9166)
+
+[node name="pine-crooked14" parent="escenario/obstaculos" instance=ExtResource("26_ngn27")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.8842, 0, 22.3463)
+
+[node name="pine12" parent="escenario/obstaculos" instance=ExtResource("27_3jeyx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.2633, 0, 23.219)
+
+[node name="pine15" parent="escenario/obstaculos" instance=ExtResource("27_3jeyx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.8889, 0, 22.1363)
+
+[node name="pine13" parent="escenario/obstaculos" instance=ExtResource("27_3jeyx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.9649, 0, 24.2133)
+
+[node name="pine14" parent="escenario/obstaculos" instance=ExtResource("27_3jeyx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.9108, 0, 23.219)
+
+[node name="gravestone-cross-large12" parent="escenario/obstaculos" instance=ExtResource("14_gxurx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.0866, 0, 39.702)
+
+[node name="pine-crooked18" parent="escenario/obstaculos" instance=ExtResource("26_ngn27")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.7044, 0, 38.1367)
+
+[node name="pine-crooked19" parent="escenario/obstaculos" instance=ExtResource("26_ngn27")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.7599, 0, 38.7069)
+
+[node name="pine-crooked20" parent="escenario/obstaculos" instance=ExtResource("26_ngn27")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.7044, 0, 38.1367)
+
+[node name="pine19" parent="escenario/obstaculos" instance=ExtResource("27_3jeyx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.0835, 0, 39.0093)
+
+[node name="pine20" parent="escenario/obstaculos" instance=ExtResource("27_3jeyx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.709, 0, 37.9267)
+
+[node name="pine21" parent="escenario/obstaculos" instance=ExtResource("27_3jeyx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.731, 0, 39.0093)
+
+[node name="pine-crooked16" parent="escenario/obstaculos" instance=ExtResource("26_ngn27")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.6782, 0, 25.5461)
+
+[node name="pine16" parent="escenario/obstaculos" instance=ExtResource("27_3jeyx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.7589, 0, 27.4131)
+
+[node name="pine18" parent="escenario/obstaculos" instance=ExtResource("27_3jeyx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.8646, 0, 33.7769)
+
+[node name="pine17" parent="escenario/obstaculos" instance=ExtResource("27_3jeyx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.7048, 0, 26.4188)
+
+[node name="pine-crooked11" parent="escenario/obstaculos" instance=ExtResource("26_ngn27")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.2744, 0, 24.8439)
+
+[node name="pine10" parent="escenario/obstaculos" instance=ExtResource("27_3jeyx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.6535, 0, 25.7166)
+
+[node name="pine11" parent="escenario/obstaculos" instance=ExtResource("27_3jeyx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.301, 0, 25.7166)
+
+[node name="pine9" parent="escenario/obstaculos" instance=ExtResource("27_3jeyx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.02801, 0, 14.8227)
+
 [node name="pine3" parent="escenario/obstaculos" instance=ExtResource("27_3jeyx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.6971, 0, 14.4184)
 
@@ -710,8 +857,17 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.0647, 0, 15.4499)
 [node name="rocks-tall3" parent="escenario/obstaculos" instance=ExtResource("28_k8a4a")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.5469, 0, 6.98898)
 
+[node name="rocks-tall4" parent="escenario/obstaculos" instance=ExtResource("28_k8a4a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.58136, 0, 15.7648)
+
 [node name="rocks2" parent="escenario/obstaculos" instance=ExtResource("29_ut8sc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.3591, 0, 17.0898)
+
+[node name="rocks4" parent="escenario/obstaculos" instance=ExtResource("29_ut8sc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.4226, 0, 32.4874)
+
+[node name="rocks3" parent="escenario/obstaculos" instance=ExtResource("29_ut8sc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2801, 0, 26.8457)
 
 [node name="shovel-dirt2" parent="escenario/obstaculos" instance=ExtResource("30_pwckb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.60387, 0, 8.10796)
@@ -719,8 +875,44 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.60387, 0, 8.10796)
 [node name="shovel-dirt3" parent="escenario/obstaculos" instance=ExtResource("30_pwckb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.6468, 0, 12.715)
 
+[node name="grave-border4" parent="escenario/obstaculos" instance=ExtResource("10_khqon")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.7896, 0, 27.7166)
+
+[node name="grave-border5" parent="escenario/obstaculos" instance=ExtResource("10_khqon")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.6265, 0, 25.4537)
+
+[node name="grave-border6" parent="escenario/obstaculos" instance=ExtResource("10_khqon")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.526, 0, 27.6213)
+
+[node name="grave3" parent="escenario/obstaculos" instance=ExtResource("11_wm1jc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.5348, 0, 23.5239)
+
+[node name="grave4" parent="escenario/obstaculos" instance=ExtResource("11_wm1jc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.244, 0, 23.5239)
+
+[node name="grave5" parent="escenario/obstaculos" instance=ExtResource("11_wm1jc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.3602, 0, 25.4811)
+
+[node name="gravestone-bevel4" parent="escenario/obstaculos" instance=ExtResource("12_3idl5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.2355, 0, 20.8034)
+
+[node name="gravestone-cross-large8" parent="escenario/obstaculos" instance=ExtResource("14_gxurx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.0075, 0, 20.8624)
+
+[node name="grave-border7" parent="escenario/obstaculos" instance=ExtResource("10_khqon")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.2665, 0, 21.7544)
+
+[node name="grave8" parent="escenario/obstaculos" instance=ExtResource("11_wm1jc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.0001, 0, 21.8076)
+
+[node name="shovel-dirt4" parent="escenario/obstaculos" instance=ExtResource("30_pwckb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.6159, 0, 26.6271)
+
 [node name="trunk-long2" parent="escenario/obstaculos" instance=ExtResource("31_83bmd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.7284, 0, 15.573)
+
+[node name="trunk-long5" parent="escenario/obstaculos" instance=ExtResource("31_83bmd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.64169, 0, 16.2104)
 
 [node name="trunk-long3" parent="escenario/obstaculos" instance=ExtResource("31_83bmd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.7163, 0, 5.92771)
@@ -730,6 +922,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.1269, 0, 7.04334)
 
 [node name="trunk2" parent="escenario/obstaculos" instance=ExtResource("32_bhy0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.7606, 0, 17.7336)
+
+[node name="trunk4" parent="escenario/obstaculos" instance=ExtResource("32_bhy0o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.4803, 0, 27.6444)
+
+[node name="trunk5" parent="escenario/obstaculos" instance=ExtResource("32_bhy0o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.7038, 0, 34.7163)
+
+[node name="trunk3" parent="escenario/obstaculos" instance=ExtResource("32_bhy0o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.7143, 0, 26.2601)
 
 [node name="columnas" type="Node3D" parent="escenario"]
 
