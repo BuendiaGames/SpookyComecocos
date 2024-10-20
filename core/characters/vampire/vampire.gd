@@ -1,7 +1,7 @@
 extends CharacterBody3D
 
 #Velocidad de movimiento del vampiro
-const speed = 50.0
+const speed = 250.0
 
 #Maquina de estados. El vampiro puede estar cazando o teletransportarse.
 #Mientras se teletransporta se queda parado en el sitio durante un ratito.
