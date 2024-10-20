@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://dceipods5me4p"]
+[gd_scene load_steps=7 format=3 uid="uid://dceipods5me4p"]
 
 [ext_resource type="Script" path="res://core/ui/ui.gd" id="1_o1l5f"]
 [ext_resource type="FontFile" uid="uid://8hm11cyxoq2" path="res://ui/Baby Halloween.ttf" id="1_pf35w"]
@@ -10,7 +10,13 @@ font = ExtResource("1_pf35w")
 font_size = 28
 font_color = Color(1, 0.538, 0.34, 1)
 
-[node name="UI" type="Control"]
+[sub_resource type="LabelSettings" id="LabelSettings_f44ay"]
+font = ExtResource("1_pf35w")
+font_size = 60
+font_color = Color(1, 0.538, 0.34, 1)
+
+[node name="UI" type="Control" groups=["nodo_ui"]]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -19,11 +25,11 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_o1l5f")
 
-[node name="margen" type="MarginContainer" parent="." groups=["nodo_ui"]]
+[node name="margen" type="MarginContainer" parent="."]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_bottom = 64.0
+offset_bottom = 74.0
 grow_horizontal = 2
 theme_override_constants/margin_left = 30
 theme_override_constants/margin_top = 10
@@ -41,5 +47,67 @@ layout_mode = 2
 texture = ExtResource("2_wjss8")
 
 [node name="key" type="TextureRect" parent="margen/container"]
+visible = false
 layout_mode = 2
 texture = ExtResource("3_3s1p6")
+
+[node name="results" type="MarginContainer" parent="." groups=["nodo_ui"]]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -123.0
+offset_top = -37.0
+offset_right = 123.0
+offset_bottom = 37.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 10
+
+[node name="container_results" type="VBoxContainer" parent="results"]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="results" type="Label" parent="results/container_results"]
+layout_mode = 2
+text = "You scaped!"
+label_settings = SubResource("LabelSettings_f44ay")
+
+[node name="container" type="HBoxContainer" parent="results/container_results"]
+layout_mode = 2
+alignment = 1
+
+[node name="pumpkin" type="TextureRect" parent="results/container_results/container"]
+layout_mode = 2
+texture = ExtResource("2_wjss8")
+
+[node name="points" type="Label" parent="results/container_results/container"]
+layout_mode = 2
+text = "0 / 60"
+label_settings = SubResource("LabelSettings_4mat5")
+
+[node name="container2" type="HBoxContainer" parent="results/container_results"]
+layout_mode = 2
+alignment = 1
+
+[node name="name" type="Label" parent="results/container_results/container2"]
+layout_mode = 2
+text = "Time:  "
+label_settings = SubResource("LabelSettings_4mat5")
+
+[node name="points" type="Label" parent="results/container_results/container2"]
+layout_mode = 2
+text = "00:00"
+label_settings = SubResource("LabelSettings_4mat5")
+
+[node name="back" type="Button" parent="results/container_results"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.537255, 0.341176, 1)
+theme_override_fonts/font = ExtResource("1_pf35w")
+text = "Back to menu"
+
+[connection signal="pressed" from="results/container_results/back" to="." method="_on_back_pressed"]

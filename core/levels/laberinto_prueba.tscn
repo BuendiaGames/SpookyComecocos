@@ -1,8 +1,7 @@
-[gd_scene load_steps=21 format=3 uid="uid://dbn2p7pxwmtmp"]
+[gd_scene load_steps=22 format=3 uid="uid://dbn2p7pxwmtmp"]
 
 [ext_resource type="PackedScene" uid="uid://ftboyhub4agj" path="res://3dmodels/iron-fence-border.glb" id="1_w0ps5"]
 [ext_resource type="PackedScene" uid="uid://cc4acm4ynfxt7" path="res://3dmodels/iron-fence-border-curve.glb" id="2_nw3se"]
-[ext_resource type="PackedScene" uid="uid://bhx7gr4poe1vx" path="res://3dmodels/altar-stone.glb" id="3_137ni"]
 [ext_resource type="PackedScene" uid="uid://bxt88ulyvcl7k" path="res://core/player/player.tscn" id="4_vcsq4"]
 [ext_resource type="PackedScene" uid="uid://do8u2iovjeolw" path="res://core/characters/vampire/vampire.tscn" id="5_7ep8m"]
 [ext_resource type="PackedScene" uid="uid://8qmusighjprr" path="res://core/objects/teletransporter.tscn" id="6_02quu"]
@@ -11,7 +10,9 @@
 [ext_resource type="PackedScene" uid="uid://brracca53ddlb" path="res://core/characters/skeleton/skeleton.tscn" id="9_8h6sy"]
 [ext_resource type="PackedScene" uid="uid://i8evkc74g76n" path="res://core/objects/calabaza.tscn" id="10_gvcv5"]
 [ext_resource type="PackedScene" uid="uid://0g1yokwjdysh" path="res://core/map_elements/farol.tscn" id="11_x5or3"]
+[ext_resource type="PackedScene" uid="uid://fbyadc334qwp" path="res://core/map_elements/mausoleo.tscn" id="12_ljanb"]
 [ext_resource type="PackedScene" uid="uid://dceipods5me4p" path="res://core/ui/ui.tscn" id="12_nep8g"]
+[ext_resource type="PackedScene" uid="uid://05k15pqpfj2e" path="res://core/objects/key.tscn" id="13_aw7ft"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_vh0cj"]
 size = Vector3(2.1, 0.5, 1.3)
@@ -60,9 +61,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.56005, 0.00105941, 3.53981)
 
 [node name="valla_hor" parent="escenario" instance=ExtResource("1_w0ps5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.57731, 0.00105941, 3.53981)
-
-[node name="altar-stone2" parent="escenario" instance=ExtResource("3_137ni")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 6.58854, 0.0147735, 5.45851)
 
 [node name="valla_ver" parent="escenario" instance=ExtResource("1_w0ps5")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.56756, 0.00211883, 4.522)
@@ -207,3 +205,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 7)
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="UI" parent="UI" instance=ExtResource("12_nep8g")]
+
+[node name="mausoleo" parent="." instance=ExtResource("12_ljanb")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 6.63773, 0, 3.46611)
+
+[node name="key" parent="." instance=ExtResource("13_aw7ft")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.9981, 0, 6.54578)

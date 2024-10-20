@@ -1,0 +1,86 @@
+[gd_scene load_steps=3 format=3 uid="uid://begfwm0fvmber"]
+
+[ext_resource type="Script" path="res://core/menu/mainmenu.gd" id="1_mnh8q"]
+[ext_resource type="FontFile" uid="uid://8hm11cyxoq2" path="res://ui/Baby Halloween.ttf" id="2_fyu4g"]
+
+[node name="mainmenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mnh8q")
+
+[node name="backgroundtext" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="columns" type="HBoxContainer" parent="backgroundtext"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="filler_left" type="Control" parent="backgroundtext/columns"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="center" type="VBoxContainer" parent="backgroundtext/columns"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="start" type="Button" parent="backgroundtext/columns/center"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_fyu4g")
+text = "Start game"
+
+[node name="credits" type="Button" parent="backgroundtext/columns/center"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_fyu4g")
+text = "Credits"
+
+[node name="credits_text" type="RichTextLabel" parent="backgroundtext/columns/center"]
+visible = false
+layout_mode = 2
+bbcode_enabled = true
+text = "[center][b]Coding[/b]
+Ana and Victor Buendía
+
+[b]Level design[/b]
+Ana Buendía
+
+[b]Music[/b]
+Victor Buendía
+
+[b]3D models[/b]
+Kenny CC0 Graveyard pack
+
+[b]Font[/b]
+Babyhalloween by Project type[/center]
+"
+fit_content = true
+
+[node name="back" type="Button" parent="backgroundtext/columns/center"]
+visible = false
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_fyu4g")
+text = "Back"
+
+[node name="filler_right" type="Control" parent="backgroundtext/columns"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="pressed" from="backgroundtext/columns/center/start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="backgroundtext/columns/center/credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="backgroundtext/columns/center/back" to="." method="_on_back_pressed"]

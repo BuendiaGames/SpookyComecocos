@@ -5,7 +5,24 @@
 [sub_resource type="SphereShape3D" id="SphereShape3D_4xdoa"]
 radius = 0.2
 
-[sub_resource type="Animation" id="Animation_ltkr7"]
+[sub_resource type="Animation" id="Animation_1kdfc"]
+resource_name = "idle"
+length = 1.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("key2:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.433333, 1.2, 1.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0.1, 0), Vector3(0, -0.1, 0), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_bosg0"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -20,29 +37,13 @@ tracks/0/keys = {
 "values": [Vector3(0, 0, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_3siqd"]
-resource_name = "idle"
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("key2:position")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5, 1),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector3(0, 0, 0), Vector3(0, -0.0641941, 0), Vector3(0, 0, 0)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_055ro"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yj3bw"]
 _data = {
-"RESET": SubResource("Animation_ltkr7"),
-"idle": SubResource("Animation_3siqd")
+"RESET": SubResource("Animation_bosg0"),
+"idle": SubResource("Animation_1kdfc")
 }
 
-[node name="key" type="Area3D"]
+[node name="key" type="Area3D" groups=["llave"]]
 
 [node name="key2" parent="." groups=["llave"] instance=ExtResource("1_w031o")]
 
@@ -50,7 +51,8 @@ _data = {
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.109028, 0)
 shape = SubResource("SphereShape3D_4xdoa")
 
-[node name="player" type="AnimationTree" parent="."]
+[node name="player" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_055ro")
+"": SubResource("AnimationLibrary_yj3bw")
 }
+autoplay = "idle"

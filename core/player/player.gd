@@ -49,7 +49,6 @@ func change_anim(new_anim):
 		current_anim = new_anim
 		$model/AnimationPlayer.play(new_anim)
 
-
 func _on_area_3d_body_entered(body: Node3D) -> void:
 	if body.is_in_group("monstruos"):
 		print("PERDER PERDER PERDER")
@@ -61,9 +60,6 @@ func _on_area_3d_area_entered(area: Area3D) -> void:
 		GameManager.collect_pumpkin()
 		area.queue_free()
 	elif area.is_in_group("llave"):
-		print("UNA LLAVE")
 		area.queue_free()
 		tiene_llave = true
-	elif area.name == "mausoleo" and tiene_llave:
-		print("HEMOS GANAO OLEEEEEEEEE")
-	
+		nodo_ui.show_key()

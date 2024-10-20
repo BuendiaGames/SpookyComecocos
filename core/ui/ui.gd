@@ -25,3 +25,13 @@ func set_pumpkin_counter(n_pumpkins : int):
 
 func show_key():
 	$margen/container/key.show()
+
+func show_results(victory = true):
+	if not victory:
+		$results/container_results/results.text = "You were caught!"
+	$results.show()
+
+
+func _on_back_pressed() -> void:
+	print("askfsjañklfjka")
+	GameManager.load_menu()

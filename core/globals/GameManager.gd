@@ -19,3 +19,17 @@ func link_to_ui(ui_nodo : Control):
 func collect_pumpkin():
 	collected_pumpkins += 1
 	ui.set_pumpkin_counter(collected_pumpkins)
+
+func load_game(level):
+	get_tree().change_scene_to_file(level)
+
+func load_menu():
+	get_tree().change_scene_to_file("res://core/menu/mainmenu.tscn")
+
+func victory():
+	get_tree().paused = true
+	ui.show_results(true)
+
+func defeat():
+	get_tree().paused = true 
+	ui.show_results(false)

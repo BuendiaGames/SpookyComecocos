@@ -1,6 +1,7 @@
-[gd_scene load_steps=13 format=4 uid="uid://fbyadc334qwp"]
+[gd_scene load_steps=14 format=4 uid="uid://fbyadc334qwp"]
 
 [ext_resource type="PackedScene" uid="uid://bvg4pm80s1vyf" path="res://3dmodels/crypt-large.glb" id="1_deiai"]
+[ext_resource type="Script" path="res://core/map_elements/mausoleo.gd" id="2_887pc"]
 [ext_resource type="PackedScene" uid="uid://30p5iss8ieah" path="res://3dmodels/crypt-large-roof.glb" id="2_bn787"]
 [ext_resource type="PackedScene" uid="uid://7vijq4erf83o" path="res://3dmodels/crypt-small-entrance-alternative.glb" id="4_kphpg"]
 [ext_resource type="Texture2D" uid="uid://bkjmqwp3qp8tw" path="res://3dmodels/Textures/colormap.png" id="7_7vjvv"]
@@ -86,6 +87,7 @@ size = Vector3(0.6, 1, 0.75)
 
 [node name="mausoleo" instance=ExtResource("1_deiai")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+script = ExtResource("2_887pc")
 
 [node name="tejado" parent="." index="1" instance=ExtResource("2_bn787")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
@@ -99,6 +101,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.204524, 0, 1)
 [node name="crypt-door" type="Node3D" parent="puerta" index="0"]
 
 [node name="door" type="MeshInstance3D" parent="puerta/crypt-door" index="0"]
+transform = Transform3D(-0.173647, 0, -0.984808, 0, 1, 0, 0.984808, 0, -0.173647, 0, 0, 0)
 mesh = SubResource("ArrayMesh_182ke")
 skeleton = NodePath("")
 
@@ -112,6 +115,8 @@ libraries = {
 [node name="shape" type="CollisionShape3D" parent="area" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.579216, 1.52778)
 shape = SubResource("BoxShape3D_trrho")
+
+[connection signal="body_entered" from="area" to="." method="_on_area_body_entered"]
 
 [editable path="tejado"]
 [editable path="marco_puerta"]
