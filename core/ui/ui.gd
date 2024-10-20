@@ -29,6 +29,20 @@ func show_key():
 func show_results(victory = true):
 	if not victory:
 		$results/container_results/results.text = "You were caught!"
+	$results/container_results/container/points.text= str(GameManager.collected_pumpkins)+"/"+str(max_pumpkins)
+	var min_juego = int(GameManager.tiempo/60)
+	var seg_juego = int(GameManager.tiempo)%60
+	
+	var cad_min_juego = str(min_juego)
+	var cad_seg_juego = str(seg_juego)
+	
+	if min_juego < 10:
+		cad_min_juego = "0" + cad_min_juego
+	if seg_juego < 10:
+		cad_seg_juego = "0" + cad_seg_juego
+	
+	$results/container_results/container2/points.text = cad_min_juego + ":" + cad_seg_juego
+	
 	$results.show()
 
 

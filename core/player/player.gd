@@ -43,6 +43,9 @@ func _process(delta: float) -> void:
 	
 	#Haz el movimiento
 	move_and_slide()
+	
+	# Cuento el tiempo
+	GameManager.tiempo += delta
 
 func change_anim(new_anim):
 	if current_anim != new_anim:
@@ -51,7 +54,7 @@ func change_anim(new_anim):
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
 	if body.is_in_group("monstruos"):
-		print("PERDER PERDER PERDER")
+		GameManager.defeat()
 		print(body.name)
 	
 

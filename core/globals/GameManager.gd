@@ -3,6 +3,7 @@ extends Node
 #Calabazas recogidas de momento
 var collected_pumpkins = 0
 var ui = null
+var tiempo = 0
 
 #Escena actual. Tendra que ser el menu. #TODO
 var current_scene = null
@@ -24,6 +25,8 @@ func load_game(level):
 	get_tree().change_scene_to_file(level)
 
 func load_menu():
+	get_tree().paused = false
+	resetear_valores()
 	get_tree().change_scene_to_file("res://core/menu/mainmenu.tscn")
 
 func victory():
@@ -33,3 +36,7 @@ func victory():
 func defeat():
 	get_tree().paused = true 
 	ui.show_results(false)
+	
+func resetear_valores():
+	collected_pumpkins = 0
+	tiempo = 0
