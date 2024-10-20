@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://biibogixogake"]
+[gd_scene load_steps=40 format=3 uid="uid://biibogixogake"]
 
 [ext_resource type="PackedScene" uid="uid://ftboyhub4agj" path="res://3dmodels/iron-fence-border.glb" id="1_oyn0n"]
 [ext_resource type="PackedScene" uid="uid://cc4acm4ynfxt7" path="res://3dmodels/iron-fence-border-curve.glb" id="2_wgod8"]
@@ -33,7 +33,9 @@
 [ext_resource type="PackedScene" uid="uid://ky7hty5yq2w4" path="res://3dmodels/trunk-long.glb" id="31_83bmd"]
 [ext_resource type="PackedScene" uid="uid://cn4k2t5tmuhq" path="res://3dmodels/trunk.glb" id="32_bhy0o"]
 [ext_resource type="PackedScene" uid="uid://dq4d54j3tehdi" path="res://3dmodels/fence.glb" id="33_n5s66"]
+[ext_resource type="PackedScene" uid="uid://ca2wqu32wke4h" path="res://3dmodels/column-large.glb" id="33_vyvrj"]
 [ext_resource type="PackedScene" uid="uid://fbyadc334qwp" path="res://core/map_elements/mausoleo.tscn" id="34_24b53"]
+[ext_resource type="PackedScene" uid="uid://bnsnmjbhid1yy" path="res://3dmodels/cross-column.glb" id="34_h6v4n"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_xk3ba"]
 vertices = PackedVector3Array(6.54809, 0.426271, 8.49996, 6.54809, 0.426271, 6.99996, 4.54809, 0.426271, 6.74996, 2.79809, 0.426271, 8.49996, 4.54809, 0.426271, 4.24996, 2.79809, 0.426271, 2.49996, 6.54809, 0.426271, 3.99996, 6.54809, 0.426271, 2.49996, 8.29809, 0.426271, 6.74996, 10.7981, 0.426271, 8.49996, 8.29809, 0.426271, 4.24996, 10.7981, 0.426271, 2.49996, 5.54809, 1.17627, 4.99996, 5.54809, 1.17627, 5.99996, 7.29809, 1.17627, 5.99996, 7.29809, 1.17627, 4.99996)
@@ -594,13 +596,19 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.70865, 0, 14.7716)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.6837, 0, 34.7916)
 
 [node name="coffin-old2" parent="escenario/obstaculos" instance=ExtResource("5_guuwk")]
-transform = Transform3D(-0.00624427, 0.0356844, -0.999344, 0.000222965, 0.999363, 0.0356837, 0.99998, 0, -0.00624825, 2.30518, 0, 21.0466)
+transform = Transform3D(-0.00624427, 0.0356844, -0.999344, 0.000222965, 0.999363, 0.0356837, 0.99998, 0, -0.00624825, 4.64242, 0, 22.136)
 
 [node name="coffin-old4" parent="escenario/obstaculos" instance=ExtResource("5_guuwk")]
 transform = Transform3D(-0.00624427, 0.0356844, -0.999344, 0.000222965, 0.999363, 0.0356837, 0.99998, 0, -0.00624825, 38.5931, 0, 22.9264)
 
 [node name="coffin-old3" parent="escenario/obstaculos" instance=ExtResource("5_guuwk")]
 transform = Transform3D(0.999999, 0, 0, 0, 1, 0, 0, 0, 1, 19.7255, 0, 27.6691)
+
+[node name="coffin-old5" parent="escenario/obstaculos" instance=ExtResource("5_guuwk")]
+transform = Transform3D(0.999999, 0, 0, 0, 1, 0, 0, 0, 1, 22.9007, 0, 20.6617)
+
+[node name="coffin-old6" parent="escenario/obstaculos" instance=ExtResource("5_guuwk")]
+transform = Transform3D(0.999999, 0, 0, 0, 1, 0, 0, 0, 1, 24.567, 0, 20.6617)
 
 [node name="coffin2" parent="escenario/obstaculos" instance=ExtResource("6_84hw1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.7023, 0, 11.5087)
@@ -612,7 +620,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.7023, 0, 11.5087)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.7023, 0, 11.5087)
 
 [node name="cross-wood2" parent="escenario/obstaculos" instance=ExtResource("7_ivsa4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.25918, 0, 21.0085)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.59642, 0, 22.0979)
 
 [node name="cross-wood4" parent="escenario/obstaculos" instance=ExtResource("7_ivsa4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.6075, 0, 33.7896)
@@ -627,10 +635,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.6761, 0, 10.6632)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.32631, 0, 7.74423)
 
 [node name="grave-border3" parent="escenario/obstaculos" instance=ExtResource("10_khqon")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41, 0, 13)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.3092, 0, 17.2501)
 
 [node name="grave2" parent="escenario/obstaculos" instance=ExtResource("11_wm1jc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42.4027, 0, 12.9582)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42.7119, 0, 17.2083)
 
 [node name="gravestone-bevel2" parent="escenario/obstaculos" instance=ExtResource("12_3idl5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.9102, 0, 15.3294)
@@ -788,14 +796,38 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.3472, 0, 26.1683)
 [node name="pine-crooked15" parent="escenario/obstaculos" instance=ExtResource("26_ngn27")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.9397, 0, 22.9166)
 
+[node name="pine-crooked22" parent="escenario/obstaculos" instance=ExtResource("26_ngn27")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.0967, 0, 18.1707)
+
 [node name="pine-crooked14" parent="escenario/obstaculos" instance=ExtResource("26_ngn27")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.8842, 0, 22.3463)
+
+[node name="pine-crooked21" parent="escenario/obstaculos" instance=ExtResource("26_ngn27")]
+transform = Transform3D(0.999927, 0, -0.0121123, 0, 1, 0, 0.0121123, 0, 0.999927, 23.1877, 0, 19.2861)
 
 [node name="pine12" parent="escenario/obstaculos" instance=ExtResource("27_3jeyx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.2633, 0, 23.219)
 
+[node name="pine22" parent="escenario/obstaculos" instance=ExtResource("27_3jeyx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.7455, 0, 19.5)
+
 [node name="pine15" parent="escenario/obstaculos" instance=ExtResource("27_3jeyx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.8889, 0, 22.1363)
+
+[node name="gravestone-cross-large13" parent="escenario/obstaculos" instance=ExtResource("14_gxurx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42.1673, 0, 16.4397)
+
+[node name="pine-crooked23" parent="escenario/obstaculos" instance=ExtResource("26_ngn27")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.7851, 0, 14.8743)
+
+[node name="pine-crooked24" parent="escenario/obstaculos" instance=ExtResource("26_ngn27")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42.8405, 0, 15.4446)
+
+[node name="pine23" parent="escenario/obstaculos" instance=ExtResource("27_3jeyx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.1642, 0, 15.747)
+
+[node name="pine24" parent="escenario/obstaculos" instance=ExtResource("27_3jeyx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.7897, 0, 14.413)
 
 [node name="pine13" parent="escenario/obstaculos" instance=ExtResource("27_3jeyx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.9649, 0, 24.2133)
@@ -873,7 +905,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2801, 0, 26.8457)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.60387, 0, 8.10796)
 
 [node name="shovel-dirt3" parent="escenario/obstaculos" instance=ExtResource("30_pwckb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.6468, 0, 12.715)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.956, 0, 16.9651)
 
 [node name="grave-border4" parent="escenario/obstaculos" instance=ExtResource("10_khqon")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.7896, 0, 27.7166)
@@ -911,8 +943,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.6159, 0, 26.6271)
 [node name="trunk-long2" parent="escenario/obstaculos" instance=ExtResource("31_83bmd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.7284, 0, 15.573)
 
+[node name="trunk-long6" parent="escenario/obstaculos" instance=ExtResource("31_83bmd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.7498, 0, 20.4376)
+
 [node name="trunk-long5" parent="escenario/obstaculos" instance=ExtResource("31_83bmd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.64169, 0, 16.2104)
+
+[node name="trunk-long7" parent="escenario/obstaculos" instance=ExtResource("31_83bmd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.30904, 0, 21.4602)
 
 [node name="trunk-long3" parent="escenario/obstaculos" instance=ExtResource("31_83bmd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.7163, 0, 5.92771)
@@ -934,441 +972,491 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.7143, 0, 26.2601)
 
 [node name="columnas" type="Node3D" parent="escenario"]
 
-[node name="circulovallas" type="Node3D" parent="escenario"]
+[node name="column-large2" parent="escenario/columnas" instance=ExtResource("33_vyvrj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.52025, 0, 4.46954)
 
-[node name="iron-fence-border41" parent="escenario/circulovallas" instance=ExtResource("1_oyn0n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+[node name="column-large3" parent="escenario/columnas" instance=ExtResource("33_vyvrj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.46286, 0, 3.58637)
 
-[node name="iron-fence-border42" parent="escenario/circulovallas" instance=ExtResource("1_oyn0n")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1, 0, 0)
+[node name="column-large4" parent="escenario/columnas" instance=ExtResource("33_vyvrj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.5126, 0, 2.57276)
 
-[node name="iron-fence-border44" parent="escenario/circulovallas" instance=ExtResource("1_oyn0n")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1, 0, 0)
+[node name="column-large6" parent="escenario/columnas" instance=ExtResource("33_vyvrj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.4906, 0, 3.44469)
 
-[node name="iron-fence-border43" parent="escenario/circulovallas" instance=ExtResource("1_oyn0n")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 1)
+[node name="column-large10" parent="escenario/columnas" instance=ExtResource("33_vyvrj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45.4727, 0, 9.89213)
 
-[node name="iron-fence-border-curve6" parent="escenario/circulovallas" instance=ExtResource("2_wgod8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -1)
+[node name="column-large7" parent="escenario/columnas" instance=ExtResource("33_vyvrj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45.5051, 0, 14.4943)
 
-[node name="iron-fence-border-curve7" parent="escenario/circulovallas" instance=ExtResource("2_wgod8")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1, 0, -1)
+[node name="column-large8" parent="escenario/columnas" instance=ExtResource("33_vyvrj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.5586, 0, 25.517)
 
-[node name="iron-fence-border-curve8" parent="escenario/circulovallas" instance=ExtResource("2_wgod8")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1, 0, 1)
+[node name="column-large9" parent="escenario/columnas" instance=ExtResource("33_vyvrj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.4821, 0, 26.4997)
 
-[node name="iron-fence-border-curve9" parent="escenario/circulovallas" instance=ExtResource("2_wgod8")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1, 0, 1)
+[node name="column-large11" parent="escenario/columnas" instance=ExtResource("33_vyvrj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.5024, 0, 42.4503)
 
-[node name="circulovallas2" type="Node3D" parent="escenario"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 3)
+[node name="column-large12" parent="escenario/columnas" instance=ExtResource("33_vyvrj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.5216, 0, 42.3983)
 
-[node name="iron-fence-border41" parent="escenario/circulovallas2" instance=ExtResource("1_oyn0n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+[node name="column-large13" parent="escenario/columnas" instance=ExtResource("33_vyvrj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.50991, 0, 28.5582)
 
-[node name="iron-fence-border42" parent="escenario/circulovallas2" instance=ExtResource("1_oyn0n")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1, 0, 0)
+[node name="column-large14" parent="escenario/columnas" instance=ExtResource("33_vyvrj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.55448, 0, 27.5084)
 
-[node name="iron-fence-border44" parent="escenario/circulovallas2" instance=ExtResource("1_oyn0n")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1, 0, 0)
+[node name="column-large15" parent="escenario/columnas" instance=ExtResource("33_vyvrj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.55886, 0, 10.5025)
 
-[node name="iron-fence-border43" parent="escenario/circulovallas2" instance=ExtResource("1_oyn0n")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 1)
+[node name="column-large5" parent="escenario/columnas" instance=ExtResource("33_vyvrj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.4784, 0, -0.452901)
 
-[node name="iron-fence-border-curve6" parent="escenario/circulovallas2" instance=ExtResource("2_wgod8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -1)
+[node name="cross-column2" parent="escenario/columnas" instance=ExtResource("34_h6v4n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.9103, 0, -0.44462)
 
-[node name="iron-fence-border-curve7" parent="escenario/circulovallas2" instance=ExtResource("2_wgod8")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1, 0, -1)
+[node name="cross-column10" parent="escenario/columnas" instance=ExtResource("34_h6v4n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.56973, 0, 18.7849)
 
-[node name="iron-fence-border-curve8" parent="escenario/circulovallas2" instance=ExtResource("2_wgod8")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1, 0, 1)
+[node name="cross-column3" parent="escenario/columnas" instance=ExtResource("34_h6v4n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.0334, 0, -0.44462)
 
-[node name="iron-fence-border-curve9" parent="escenario/circulovallas2" instance=ExtResource("2_wgod8")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1, 0, 1)
+[node name="cross-column4" parent="escenario/columnas" instance=ExtResource("34_h6v4n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44.4983, 0, 3.5142)
 
-[node name="circulovallas3" type="Node3D" parent="escenario"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, 39)
+[node name="cross-column5" parent="escenario/columnas" instance=ExtResource("34_h6v4n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.4978, 0, 15.5213)
 
-[node name="iron-fence-border41" parent="escenario/circulovallas3" instance=ExtResource("1_oyn0n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+[node name="cross-column6" parent="escenario/columnas" instance=ExtResource("34_h6v4n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.4533, 0, 36.4675)
 
-[node name="iron-fence-border42" parent="escenario/circulovallas3" instance=ExtResource("1_oyn0n")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1, 0, 0)
+[node name="cross-column7" parent="escenario/columnas" instance=ExtResource("34_h6v4n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.5297, 0, 45.5179)
 
-[node name="iron-fence-border44" parent="escenario/circulovallas3" instance=ExtResource("1_oyn0n")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1, 0, 0)
+[node name="cross-column8" parent="escenario/columnas" instance=ExtResource("34_h6v4n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.4906, 0, 41.4213)
 
-[node name="iron-fence-border43" parent="escenario/circulovallas3" instance=ExtResource("1_oyn0n")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 1)
-
-[node name="iron-fence-border-curve6" parent="escenario/circulovallas3" instance=ExtResource("2_wgod8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -1)
-
-[node name="iron-fence-border-curve7" parent="escenario/circulovallas3" instance=ExtResource("2_wgod8")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1, 0, -1)
-
-[node name="iron-fence-border-curve8" parent="escenario/circulovallas3" instance=ExtResource("2_wgod8")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1, 0, 1)
-
-[node name="iron-fence-border-curve9" parent="escenario/circulovallas3" instance=ExtResource("2_wgod8")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1, 0, 1)
-
-[node name="circulovallas4" type="Node3D" parent="escenario"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42, 0, 43)
-
-[node name="iron-fence-border41" parent="escenario/circulovallas4" instance=ExtResource("1_oyn0n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
-
-[node name="iron-fence-border42" parent="escenario/circulovallas4" instance=ExtResource("1_oyn0n")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1, 0, 0)
-
-[node name="iron-fence-border44" parent="escenario/circulovallas4" instance=ExtResource("1_oyn0n")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1, 0, 0)
-
-[node name="iron-fence-border43" parent="escenario/circulovallas4" instance=ExtResource("1_oyn0n")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 1)
-
-[node name="iron-fence-border-curve6" parent="escenario/circulovallas4" instance=ExtResource("2_wgod8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -1)
-
-[node name="iron-fence-border-curve7" parent="escenario/circulovallas4" instance=ExtResource("2_wgod8")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1, 0, -1)
-
-[node name="iron-fence-border-curve8" parent="escenario/circulovallas4" instance=ExtResource("2_wgod8")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1, 0, 1)
-
-[node name="iron-fence-border-curve9" parent="escenario/circulovallas4" instance=ExtResource("2_wgod8")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1, 0, 1)
-
-[node name="circulovallas5" type="Node3D" parent="escenario"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37, 0, 28)
-
-[node name="iron-fence-border41" parent="escenario/circulovallas5" instance=ExtResource("1_oyn0n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
-
-[node name="iron-fence-border42" parent="escenario/circulovallas5" instance=ExtResource("1_oyn0n")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1, 0, 0)
-
-[node name="iron-fence-border44" parent="escenario/circulovallas5" instance=ExtResource("1_oyn0n")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1, 0, 0)
-
-[node name="iron-fence-border43" parent="escenario/circulovallas5" instance=ExtResource("1_oyn0n")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 1)
-
-[node name="iron-fence-border-curve6" parent="escenario/circulovallas5" instance=ExtResource("2_wgod8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -1)
-
-[node name="iron-fence-border-curve7" parent="escenario/circulovallas5" instance=ExtResource("2_wgod8")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1, 0, -1)
-
-[node name="iron-fence-border-curve8" parent="escenario/circulovallas5" instance=ExtResource("2_wgod8")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1, 0, 1)
-
-[node name="iron-fence-border-curve9" parent="escenario/circulovallas5" instance=ExtResource("2_wgod8")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1, 0, 1)
-
-[node name="circulovallas9" type="Node3D" parent="escenario"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, 19)
-
-[node name="iron-fence-border41" parent="escenario/circulovallas9" instance=ExtResource("1_oyn0n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
-
-[node name="iron-fence-border42" parent="escenario/circulovallas9" instance=ExtResource("1_oyn0n")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1, 0, 0)
-
-[node name="iron-fence-border44" parent="escenario/circulovallas9" instance=ExtResource("1_oyn0n")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1, 0, 0)
-
-[node name="iron-fence-border43" parent="escenario/circulovallas9" instance=ExtResource("1_oyn0n")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 1)
-
-[node name="iron-fence-border-curve6" parent="escenario/circulovallas9" instance=ExtResource("2_wgod8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -1)
-
-[node name="iron-fence-border-curve7" parent="escenario/circulovallas9" instance=ExtResource("2_wgod8")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1, 0, -1)
-
-[node name="iron-fence-border-curve8" parent="escenario/circulovallas9" instance=ExtResource("2_wgod8")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1, 0, 1)
-
-[node name="iron-fence-border-curve9" parent="escenario/circulovallas9" instance=ExtResource("2_wgod8")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1, 0, 1)
-
-[node name="circulovallas6" type="Node3D" parent="escenario"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 0, 13)
-
-[node name="iron-fence-border41" parent="escenario/circulovallas6" instance=ExtResource("1_oyn0n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
-
-[node name="iron-fence-border42" parent="escenario/circulovallas6" instance=ExtResource("1_oyn0n")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1, 0, 0)
-
-[node name="iron-fence-border44" parent="escenario/circulovallas6" instance=ExtResource("1_oyn0n")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1, 0, 0)
-
-[node name="iron-fence-border43" parent="escenario/circulovallas6" instance=ExtResource("1_oyn0n")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 1)
-
-[node name="iron-fence-border-curve6" parent="escenario/circulovallas6" instance=ExtResource("2_wgod8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -1)
-
-[node name="iron-fence-border-curve7" parent="escenario/circulovallas6" instance=ExtResource("2_wgod8")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1, 0, -1)
-
-[node name="iron-fence-border-curve8" parent="escenario/circulovallas6" instance=ExtResource("2_wgod8")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1, 0, 1)
-
-[node name="iron-fence-border-curve9" parent="escenario/circulovallas6" instance=ExtResource("2_wgod8")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1, 0, 1)
-
-[node name="circulovallas10" type="Node3D" parent="escenario"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25, 0, 33)
-
-[node name="iron-fence-border41" parent="escenario/circulovallas10" instance=ExtResource("1_oyn0n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
-
-[node name="iron-fence-border42" parent="escenario/circulovallas10" instance=ExtResource("1_oyn0n")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1, 0, 0)
-
-[node name="iron-fence-border44" parent="escenario/circulovallas10" instance=ExtResource("1_oyn0n")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1, 0, 0)
-
-[node name="iron-fence-border43" parent="escenario/circulovallas10" instance=ExtResource("1_oyn0n")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 1)
-
-[node name="iron-fence-border-curve6" parent="escenario/circulovallas10" instance=ExtResource("2_wgod8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -1)
-
-[node name="iron-fence-border-curve7" parent="escenario/circulovallas10" instance=ExtResource("2_wgod8")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1, 0, -1)
-
-[node name="iron-fence-border-curve8" parent="escenario/circulovallas10" instance=ExtResource("2_wgod8")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1, 0, 1)
-
-[node name="iron-fence-border-curve9" parent="escenario/circulovallas10" instance=ExtResource("2_wgod8")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1, 0, 1)
-
-[node name="circulovallas7" type="Node3D" parent="escenario"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40, 0, 8)
-
-[node name="iron-fence-border41" parent="escenario/circulovallas7" instance=ExtResource("1_oyn0n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
-
-[node name="iron-fence-border45" parent="escenario/circulovallas7" instance=ExtResource("1_oyn0n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
-
-[node name="iron-fence-border42" parent="escenario/circulovallas7" instance=ExtResource("1_oyn0n")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2, 0, 0)
-
-[node name="iron-fence-border44" parent="escenario/circulovallas7" instance=ExtResource("1_oyn0n")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1, 0, 0)
-
-[node name="iron-fence-border43" parent="escenario/circulovallas7" instance=ExtResource("1_oyn0n")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 1)
-
-[node name="iron-fence-border46" parent="escenario/circulovallas7" instance=ExtResource("1_oyn0n")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1, 0, 1)
-
-[node name="iron-fence-border-curve6" parent="escenario/circulovallas7" instance=ExtResource("2_wgod8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -1)
-
-[node name="iron-fence-border-curve7" parent="escenario/circulovallas7" instance=ExtResource("2_wgod8")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2, 0, -1)
-
-[node name="iron-fence-border-curve8" parent="escenario/circulovallas7" instance=ExtResource("2_wgod8")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2, 0, 1)
-
-[node name="iron-fence-border-curve9" parent="escenario/circulovallas7" instance=ExtResource("2_wgod8")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1, 0, 1)
-
-[node name="circulovallas8" type="Node3D" parent="escenario"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45, 0, 22)
-
-[node name="iron-fence-border41" parent="escenario/circulovallas8" instance=ExtResource("1_oyn0n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
-
-[node name="iron-fence-border45" parent="escenario/circulovallas8" instance=ExtResource("1_oyn0n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
-
-[node name="iron-fence-border42" parent="escenario/circulovallas8" instance=ExtResource("1_oyn0n")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2, 0, 0)
-
-[node name="iron-fence-border44" parent="escenario/circulovallas8" instance=ExtResource("1_oyn0n")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1, 0, 0)
-
-[node name="iron-fence-border43" parent="escenario/circulovallas8" instance=ExtResource("1_oyn0n")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 1)
-
-[node name="iron-fence-border46" parent="escenario/circulovallas8" instance=ExtResource("1_oyn0n")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1, 0, 1)
-
-[node name="iron-fence-border-curve6" parent="escenario/circulovallas8" instance=ExtResource("2_wgod8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -1)
-
-[node name="iron-fence-border-curve7" parent="escenario/circulovallas8" instance=ExtResource("2_wgod8")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2, 0, -1)
-
-[node name="iron-fence-border-curve8" parent="escenario/circulovallas8" instance=ExtResource("2_wgod8")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2, 0, 1)
-
-[node name="iron-fence-border-curve9" parent="escenario/circulovallas8" instance=ExtResource("2_wgod8")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1, 0, 1)
-
-[node name="circulovallas11" type="Node3D" parent="escenario"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40, 0, 34)
-
-[node name="iron-fence-border41" parent="escenario/circulovallas11" instance=ExtResource("1_oyn0n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
-
-[node name="iron-fence-border45" parent="escenario/circulovallas11" instance=ExtResource("1_oyn0n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
-
-[node name="iron-fence-border47" parent="escenario/circulovallas11" instance=ExtResource("1_oyn0n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -1)
-
-[node name="iron-fence-border48" parent="escenario/circulovallas11" instance=ExtResource("1_oyn0n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -1)
-
-[node name="iron-fence-border49" parent="escenario/circulovallas11" instance=ExtResource("1_oyn0n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -1)
-
-[node name="iron-fence-border50" parent="escenario/circulovallas11" instance=ExtResource("1_oyn0n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -1)
-
-[node name="iron-fence-border51" parent="escenario/circulovallas11" instance=ExtResource("1_oyn0n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -1)
-
-[node name="iron-fence-border52" parent="escenario/circulovallas11" instance=ExtResource("1_oyn0n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -1)
-
-[node name="iron-fence-border53" parent="escenario/circulovallas11" instance=ExtResource("1_oyn0n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -1)
-
-[node name="iron-fence-border54" parent="escenario/circulovallas11" instance=ExtResource("1_oyn0n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, -1)
-
-[node name="iron-fence-border42" parent="escenario/circulovallas11" instance=ExtResource("1_oyn0n")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2, 0, 0)
-
-[node name="iron-fence-border44" parent="escenario/circulovallas11" instance=ExtResource("1_oyn0n")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -9, 0, 0)
-
-[node name="iron-fence-border43" parent="escenario/circulovallas11" instance=ExtResource("1_oyn0n")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 1)
-
-[node name="iron-fence-border46" parent="escenario/circulovallas11" instance=ExtResource("1_oyn0n")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1, 0, 1)
-
-[node name="iron-fence-border55" parent="escenario/circulovallas11" instance=ExtResource("1_oyn0n")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -2, 0, 1)
-
-[node name="iron-fence-border56" parent="escenario/circulovallas11" instance=ExtResource("1_oyn0n")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1, 0, 1)
-
-[node name="iron-fence-border61" parent="escenario/circulovallas11" instance=ExtResource("1_oyn0n")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -8, 0, 1)
-
-[node name="iron-fence-border62" parent="escenario/circulovallas11" instance=ExtResource("1_oyn0n")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -7, 0, 1)
-
-[node name="iron-fence-border57" parent="escenario/circulovallas11" instance=ExtResource("1_oyn0n")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -4, 0, 1)
-
-[node name="iron-fence-border58" parent="escenario/circulovallas11" instance=ExtResource("1_oyn0n")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -3, 0, 1)
-
-[node name="iron-fence-border59" parent="escenario/circulovallas11" instance=ExtResource("1_oyn0n")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -6, 0, 1)
-
-[node name="iron-fence-border60" parent="escenario/circulovallas11" instance=ExtResource("1_oyn0n")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -5, 0, 1)
-
-[node name="iron-fence-border-curve6" parent="escenario/circulovallas11" instance=ExtResource("2_wgod8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, -1)
-
-[node name="iron-fence-border-curve7" parent="escenario/circulovallas11" instance=ExtResource("2_wgod8")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2, 0, -1)
-
-[node name="iron-fence-border-curve8" parent="escenario/circulovallas11" instance=ExtResource("2_wgod8")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2, 0, 1)
-
-[node name="iron-fence-border-curve9" parent="escenario/circulovallas11" instance=ExtResource("2_wgod8")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -9, 0, 1)
-
-[node name="vallasmadera" type="Node3D" parent="escenario"]
-
-[node name="fence2" parent="escenario/vallasmadera" instance=ExtResource("33_n5s66")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 11)
-
-[node name="fence3" parent="escenario/vallasmadera" instance=ExtResource("33_n5s66")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 11)
-
-[node name="fence4" parent="escenario/vallasmadera" instance=ExtResource("33_n5s66")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 11)
-
-[node name="fence5" parent="escenario/vallasmadera" instance=ExtResource("33_n5s66")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 11)
-
-[node name="fence6" parent="escenario/vallasmadera" instance=ExtResource("33_n5s66")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 16, 0, 0)
-
-[node name="fence7" parent="escenario/vallasmadera" instance=ExtResource("33_n5s66")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 16, 0, 1)
-
-[node name="fence8" parent="escenario/vallasmadera" instance=ExtResource("33_n5s66")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 16, 0, 2)
-
-[node name="fence9" parent="escenario/vallasmadera" instance=ExtResource("33_n5s66")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 35, 0, 4)
-
-[node name="fence10" parent="escenario/vallasmadera" instance=ExtResource("33_n5s66")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 35, 0, 5)
-
-[node name="fence11" parent="escenario/vallasmadera" instance=ExtResource("33_n5s66")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 35, 0, 6)
-
-[node name="fence12" parent="escenario/vallasmadera" instance=ExtResource("33_n5s66")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 35, 0, 7)
-
-[node name="fence13" parent="escenario/vallasmadera" instance=ExtResource("33_n5s66")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 35, 0, 8)
-
-[node name="fence14" parent="escenario/vallasmadera" instance=ExtResource("33_n5s66")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 35, 0, 9)
-
-[node name="fence19" parent="escenario/vallasmadera" instance=ExtResource("33_n5s66")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 36, 0, 41)
-
-[node name="fence20" parent="escenario/vallasmadera" instance=ExtResource("33_n5s66")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 36, 0, 42)
-
-[node name="fence21" parent="escenario/vallasmadera" instance=ExtResource("33_n5s66")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 22, 0, 41)
-
-[node name="fence22" parent="escenario/vallasmadera" instance=ExtResource("33_n5s66")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 22, 0, 42)
-
-[node name="fence23" parent="escenario/vallasmadera" instance=ExtResource("33_n5s66")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 22, 0, 39)
-
-[node name="fence24" parent="escenario/vallasmadera" instance=ExtResource("33_n5s66")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 22, 0, 40)
-
-[node name="fence15" parent="escenario/vallasmadera" instance=ExtResource("33_n5s66")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43, 0, 27)
-
-[node name="fence16" parent="escenario/vallasmadera" instance=ExtResource("33_n5s66")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44, 0, 27)
-
-[node name="fence17" parent="escenario/vallasmadera" instance=ExtResource("33_n5s66")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45, 0, 27)
-
-[node name="fence18" parent="escenario/vallasmadera" instance=ExtResource("33_n5s66")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46, 0, 27)
+[node name="cross-column9" parent="escenario/columnas" instance=ExtResource("34_h6v4n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.4941, 0, 38.4737)
 
 [node name="mausoleo" parent="escenario" instance=ExtResource("34_24b53")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 29, 0, 8)
+
+[node name="colisionadores" type="Node3D" parent="escenario"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 29, 0, 8)
+
+[node name="decoraciones" type="Node3D" parent="escenario"]
+
+[node name="vallasdentro" type="Node3D" parent="escenario"]
+
+[node name="circulovallas11" type="Node3D" parent="escenario/vallasdentro"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40, 0, 34)
+
+[node name="iron-fence-border41" parent="escenario/vallasdentro/circulovallas11" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+
+[node name="iron-fence-border45" parent="escenario/vallasdentro/circulovallas11" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+
+[node name="iron-fence-border47" parent="escenario/vallasdentro/circulovallas11" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -1)
+
+[node name="iron-fence-border48" parent="escenario/vallasdentro/circulovallas11" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -1)
+
+[node name="iron-fence-border49" parent="escenario/vallasdentro/circulovallas11" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -1)
+
+[node name="iron-fence-border50" parent="escenario/vallasdentro/circulovallas11" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -1)
+
+[node name="iron-fence-border51" parent="escenario/vallasdentro/circulovallas11" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -1)
+
+[node name="iron-fence-border52" parent="escenario/vallasdentro/circulovallas11" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -1)
+
+[node name="iron-fence-border53" parent="escenario/vallasdentro/circulovallas11" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -1)
+
+[node name="iron-fence-border54" parent="escenario/vallasdentro/circulovallas11" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, -1)
+
+[node name="iron-fence-border42" parent="escenario/vallasdentro/circulovallas11" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2, 0, 0)
+
+[node name="iron-fence-border44" parent="escenario/vallasdentro/circulovallas11" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -9, 0, 0)
+
+[node name="iron-fence-border43" parent="escenario/vallasdentro/circulovallas11" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 1)
+
+[node name="iron-fence-border46" parent="escenario/vallasdentro/circulovallas11" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1, 0, 1)
+
+[node name="iron-fence-border55" parent="escenario/vallasdentro/circulovallas11" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -2, 0, 1)
+
+[node name="iron-fence-border56" parent="escenario/vallasdentro/circulovallas11" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1, 0, 1)
+
+[node name="iron-fence-border61" parent="escenario/vallasdentro/circulovallas11" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -8, 0, 1)
+
+[node name="iron-fence-border62" parent="escenario/vallasdentro/circulovallas11" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -7, 0, 1)
+
+[node name="iron-fence-border57" parent="escenario/vallasdentro/circulovallas11" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -4, 0, 1)
+
+[node name="iron-fence-border58" parent="escenario/vallasdentro/circulovallas11" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -3, 0, 1)
+
+[node name="iron-fence-border59" parent="escenario/vallasdentro/circulovallas11" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -6, 0, 1)
+
+[node name="iron-fence-border60" parent="escenario/vallasdentro/circulovallas11" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -5, 0, 1)
+
+[node name="iron-fence-border-curve6" parent="escenario/vallasdentro/circulovallas11" instance=ExtResource("2_wgod8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, -1)
+
+[node name="iron-fence-border-curve7" parent="escenario/vallasdentro/circulovallas11" instance=ExtResource("2_wgod8")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2, 0, -1)
+
+[node name="iron-fence-border-curve8" parent="escenario/vallasdentro/circulovallas11" instance=ExtResource("2_wgod8")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2, 0, 1)
+
+[node name="iron-fence-border-curve9" parent="escenario/vallasdentro/circulovallas11" instance=ExtResource("2_wgod8")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -9, 0, 1)
+
+[node name="circulovallas8" type="Node3D" parent="escenario/vallasdentro"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45, 0, 22)
+
+[node name="iron-fence-border41" parent="escenario/vallasdentro/circulovallas8" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+
+[node name="iron-fence-border45" parent="escenario/vallasdentro/circulovallas8" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+
+[node name="iron-fence-border42" parent="escenario/vallasdentro/circulovallas8" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2, 0, 0)
+
+[node name="iron-fence-border44" parent="escenario/vallasdentro/circulovallas8" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1, 0, 0)
+
+[node name="iron-fence-border43" parent="escenario/vallasdentro/circulovallas8" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 1)
+
+[node name="iron-fence-border46" parent="escenario/vallasdentro/circulovallas8" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1, 0, 1)
+
+[node name="iron-fence-border-curve6" parent="escenario/vallasdentro/circulovallas8" instance=ExtResource("2_wgod8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -1)
+
+[node name="iron-fence-border-curve7" parent="escenario/vallasdentro/circulovallas8" instance=ExtResource("2_wgod8")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2, 0, -1)
+
+[node name="iron-fence-border-curve8" parent="escenario/vallasdentro/circulovallas8" instance=ExtResource("2_wgod8")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2, 0, 1)
+
+[node name="iron-fence-border-curve9" parent="escenario/vallasdentro/circulovallas8" instance=ExtResource("2_wgod8")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1, 0, 1)
+
+[node name="circulovallas7" type="Node3D" parent="escenario/vallasdentro"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40, 0, 8)
+
+[node name="iron-fence-border41" parent="escenario/vallasdentro/circulovallas7" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+
+[node name="iron-fence-border45" parent="escenario/vallasdentro/circulovallas7" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+
+[node name="iron-fence-border42" parent="escenario/vallasdentro/circulovallas7" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2, 0, 0)
+
+[node name="iron-fence-border44" parent="escenario/vallasdentro/circulovallas7" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1, 0, 0)
+
+[node name="iron-fence-border43" parent="escenario/vallasdentro/circulovallas7" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 1)
+
+[node name="iron-fence-border46" parent="escenario/vallasdentro/circulovallas7" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1, 0, 1)
+
+[node name="iron-fence-border-curve6" parent="escenario/vallasdentro/circulovallas7" instance=ExtResource("2_wgod8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -1)
+
+[node name="iron-fence-border-curve7" parent="escenario/vallasdentro/circulovallas7" instance=ExtResource("2_wgod8")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2, 0, -1)
+
+[node name="iron-fence-border-curve8" parent="escenario/vallasdentro/circulovallas7" instance=ExtResource("2_wgod8")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2, 0, 1)
+
+[node name="iron-fence-border-curve9" parent="escenario/vallasdentro/circulovallas7" instance=ExtResource("2_wgod8")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1, 0, 1)
+
+[node name="vallasmadera" type="Node3D" parent="escenario/vallasdentro"]
+
+[node name="fence2" parent="escenario/vallasdentro/vallasmadera" instance=ExtResource("33_n5s66")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 11)
+
+[node name="fence3" parent="escenario/vallasdentro/vallasmadera" instance=ExtResource("33_n5s66")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 11)
+
+[node name="fence4" parent="escenario/vallasdentro/vallasmadera" instance=ExtResource("33_n5s66")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 11)
+
+[node name="fence5" parent="escenario/vallasdentro/vallasmadera" instance=ExtResource("33_n5s66")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 11)
+
+[node name="fence6" parent="escenario/vallasdentro/vallasmadera" instance=ExtResource("33_n5s66")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 16, 0, 0)
+
+[node name="fence7" parent="escenario/vallasdentro/vallasmadera" instance=ExtResource("33_n5s66")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 16, 0, 1)
+
+[node name="fence8" parent="escenario/vallasdentro/vallasmadera" instance=ExtResource("33_n5s66")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 16, 0, 2)
+
+[node name="fence9" parent="escenario/vallasdentro/vallasmadera" instance=ExtResource("33_n5s66")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 35, 0, 4)
+
+[node name="fence10" parent="escenario/vallasdentro/vallasmadera" instance=ExtResource("33_n5s66")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 35, 0, 5)
+
+[node name="fence11" parent="escenario/vallasdentro/vallasmadera" instance=ExtResource("33_n5s66")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 35, 0, 6)
+
+[node name="fence12" parent="escenario/vallasdentro/vallasmadera" instance=ExtResource("33_n5s66")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 35, 0, 7)
+
+[node name="fence13" parent="escenario/vallasdentro/vallasmadera" instance=ExtResource("33_n5s66")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 35, 0, 8)
+
+[node name="fence14" parent="escenario/vallasdentro/vallasmadera" instance=ExtResource("33_n5s66")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 35, 0, 9)
+
+[node name="fence19" parent="escenario/vallasdentro/vallasmadera" instance=ExtResource("33_n5s66")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 36, 0, 41)
+
+[node name="fence20" parent="escenario/vallasdentro/vallasmadera" instance=ExtResource("33_n5s66")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 36, 0, 42)
+
+[node name="fence21" parent="escenario/vallasdentro/vallasmadera" instance=ExtResource("33_n5s66")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 22, 0, 41)
+
+[node name="fence22" parent="escenario/vallasdentro/vallasmadera" instance=ExtResource("33_n5s66")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 22, 0, 42)
+
+[node name="fence23" parent="escenario/vallasdentro/vallasmadera" instance=ExtResource("33_n5s66")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 22, 0, 39)
+
+[node name="fence24" parent="escenario/vallasdentro/vallasmadera" instance=ExtResource("33_n5s66")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 22, 0, 40)
+
+[node name="fence15" parent="escenario/vallasdentro/vallasmadera" instance=ExtResource("33_n5s66")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43, 0, 27)
+
+[node name="fence16" parent="escenario/vallasdentro/vallasmadera" instance=ExtResource("33_n5s66")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44, 0, 27)
+
+[node name="fence17" parent="escenario/vallasdentro/vallasmadera" instance=ExtResource("33_n5s66")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45, 0, 27)
+
+[node name="fence18" parent="escenario/vallasdentro/vallasmadera" instance=ExtResource("33_n5s66")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46, 0, 27)
+
+[node name="circulovallas10" type="Node3D" parent="escenario/vallasdentro"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25, 0, 33)
+
+[node name="iron-fence-border41" parent="escenario/vallasdentro/circulovallas10" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+
+[node name="iron-fence-border42" parent="escenario/vallasdentro/circulovallas10" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1, 0, 0)
+
+[node name="iron-fence-border44" parent="escenario/vallasdentro/circulovallas10" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1, 0, 0)
+
+[node name="iron-fence-border43" parent="escenario/vallasdentro/circulovallas10" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 1)
+
+[node name="iron-fence-border-curve6" parent="escenario/vallasdentro/circulovallas10" instance=ExtResource("2_wgod8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -1)
+
+[node name="iron-fence-border-curve7" parent="escenario/vallasdentro/circulovallas10" instance=ExtResource("2_wgod8")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1, 0, -1)
+
+[node name="iron-fence-border-curve8" parent="escenario/vallasdentro/circulovallas10" instance=ExtResource("2_wgod8")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1, 0, 1)
+
+[node name="iron-fence-border-curve9" parent="escenario/vallasdentro/circulovallas10" instance=ExtResource("2_wgod8")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1, 0, 1)
+
+[node name="circulovallas6" type="Node3D" parent="escenario/vallasdentro"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 0, 13)
+
+[node name="iron-fence-border41" parent="escenario/vallasdentro/circulovallas6" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+
+[node name="iron-fence-border42" parent="escenario/vallasdentro/circulovallas6" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1, 0, 0)
+
+[node name="iron-fence-border44" parent="escenario/vallasdentro/circulovallas6" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1, 0, 0)
+
+[node name="iron-fence-border43" parent="escenario/vallasdentro/circulovallas6" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 1)
+
+[node name="iron-fence-border-curve6" parent="escenario/vallasdentro/circulovallas6" instance=ExtResource("2_wgod8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -1)
+
+[node name="iron-fence-border-curve7" parent="escenario/vallasdentro/circulovallas6" instance=ExtResource("2_wgod8")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1, 0, -1)
+
+[node name="iron-fence-border-curve8" parent="escenario/vallasdentro/circulovallas6" instance=ExtResource("2_wgod8")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1, 0, 1)
+
+[node name="iron-fence-border-curve9" parent="escenario/vallasdentro/circulovallas6" instance=ExtResource("2_wgod8")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1, 0, 1)
+
+[node name="circulovallas9" type="Node3D" parent="escenario/vallasdentro"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, 19)
+
+[node name="iron-fence-border41" parent="escenario/vallasdentro/circulovallas9" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+
+[node name="iron-fence-border42" parent="escenario/vallasdentro/circulovallas9" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1, 0, 0)
+
+[node name="iron-fence-border44" parent="escenario/vallasdentro/circulovallas9" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1, 0, 0)
+
+[node name="iron-fence-border43" parent="escenario/vallasdentro/circulovallas9" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 1)
+
+[node name="iron-fence-border-curve6" parent="escenario/vallasdentro/circulovallas9" instance=ExtResource("2_wgod8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -1)
+
+[node name="iron-fence-border-curve7" parent="escenario/vallasdentro/circulovallas9" instance=ExtResource("2_wgod8")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1, 0, -1)
+
+[node name="iron-fence-border-curve8" parent="escenario/vallasdentro/circulovallas9" instance=ExtResource("2_wgod8")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1, 0, 1)
+
+[node name="iron-fence-border-curve9" parent="escenario/vallasdentro/circulovallas9" instance=ExtResource("2_wgod8")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1, 0, 1)
+
+[node name="circulovallas5" type="Node3D" parent="escenario/vallasdentro"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37, 0, 28)
+
+[node name="iron-fence-border41" parent="escenario/vallasdentro/circulovallas5" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+
+[node name="iron-fence-border42" parent="escenario/vallasdentro/circulovallas5" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1, 0, 0)
+
+[node name="iron-fence-border44" parent="escenario/vallasdentro/circulovallas5" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1, 0, 0)
+
+[node name="iron-fence-border43" parent="escenario/vallasdentro/circulovallas5" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 1)
+
+[node name="iron-fence-border-curve6" parent="escenario/vallasdentro/circulovallas5" instance=ExtResource("2_wgod8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -1)
+
+[node name="iron-fence-border-curve7" parent="escenario/vallasdentro/circulovallas5" instance=ExtResource("2_wgod8")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1, 0, -1)
+
+[node name="iron-fence-border-curve8" parent="escenario/vallasdentro/circulovallas5" instance=ExtResource("2_wgod8")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1, 0, 1)
+
+[node name="iron-fence-border-curve9" parent="escenario/vallasdentro/circulovallas5" instance=ExtResource("2_wgod8")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1, 0, 1)
+
+[node name="circulovallas4" type="Node3D" parent="escenario/vallasdentro"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42, 0, 43)
+
+[node name="iron-fence-border41" parent="escenario/vallasdentro/circulovallas4" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+
+[node name="iron-fence-border42" parent="escenario/vallasdentro/circulovallas4" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1, 0, 0)
+
+[node name="iron-fence-border44" parent="escenario/vallasdentro/circulovallas4" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1, 0, 0)
+
+[node name="iron-fence-border43" parent="escenario/vallasdentro/circulovallas4" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 1)
+
+[node name="iron-fence-border-curve6" parent="escenario/vallasdentro/circulovallas4" instance=ExtResource("2_wgod8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -1)
+
+[node name="iron-fence-border-curve7" parent="escenario/vallasdentro/circulovallas4" instance=ExtResource("2_wgod8")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1, 0, -1)
+
+[node name="iron-fence-border-curve8" parent="escenario/vallasdentro/circulovallas4" instance=ExtResource("2_wgod8")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1, 0, 1)
+
+[node name="iron-fence-border-curve9" parent="escenario/vallasdentro/circulovallas4" instance=ExtResource("2_wgod8")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1, 0, 1)
+
+[node name="circulovallas3" type="Node3D" parent="escenario/vallasdentro"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, 39)
+
+[node name="iron-fence-border41" parent="escenario/vallasdentro/circulovallas3" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+
+[node name="iron-fence-border42" parent="escenario/vallasdentro/circulovallas3" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1, 0, 0)
+
+[node name="iron-fence-border44" parent="escenario/vallasdentro/circulovallas3" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1, 0, 0)
+
+[node name="iron-fence-border43" parent="escenario/vallasdentro/circulovallas3" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 1)
+
+[node name="iron-fence-border-curve6" parent="escenario/vallasdentro/circulovallas3" instance=ExtResource("2_wgod8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -1)
+
+[node name="iron-fence-border-curve7" parent="escenario/vallasdentro/circulovallas3" instance=ExtResource("2_wgod8")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1, 0, -1)
+
+[node name="iron-fence-border-curve8" parent="escenario/vallasdentro/circulovallas3" instance=ExtResource("2_wgod8")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1, 0, 1)
+
+[node name="iron-fence-border-curve9" parent="escenario/vallasdentro/circulovallas3" instance=ExtResource("2_wgod8")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1, 0, 1)
+
+[node name="circulovallas2" type="Node3D" parent="escenario/vallasdentro"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 3)
+
+[node name="iron-fence-border41" parent="escenario/vallasdentro/circulovallas2" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+
+[node name="iron-fence-border42" parent="escenario/vallasdentro/circulovallas2" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1, 0, 0)
+
+[node name="iron-fence-border44" parent="escenario/vallasdentro/circulovallas2" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1, 0, 0)
+
+[node name="iron-fence-border43" parent="escenario/vallasdentro/circulovallas2" instance=ExtResource("1_oyn0n")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 1)
+
+[node name="iron-fence-border-curve6" parent="escenario/vallasdentro/circulovallas2" instance=ExtResource("2_wgod8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -1)
+
+[node name="iron-fence-border-curve7" parent="escenario/vallasdentro/circulovallas2" instance=ExtResource("2_wgod8")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1, 0, -1)
+
+[node name="iron-fence-border-curve8" parent="escenario/vallasdentro/circulovallas2" instance=ExtResource("2_wgod8")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1, 0, 1)
+
+[node name="iron-fence-border-curve9" parent="escenario/vallasdentro/circulovallas2" instance=ExtResource("2_wgod8")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1, 0, 1)
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
 visible = false
