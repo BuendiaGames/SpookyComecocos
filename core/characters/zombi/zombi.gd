@@ -14,18 +14,22 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
-	
-	#Coge la direccion a la proxima pista del navmesh, hacia el jugador
-	var direction = $NavigationAgent3D.get_next_path_position() - position
-	direction.y = 0. 
-	velocity = delta * speed * direction.normalized()
-	
-	#Rotacion hacia donde esta andando
-	var look_direction = Vector2(velocity.z, velocity.x)
-	$main_mesh.rotation.y = look_direction.angle()
-	
-	#Mover y colisionar
-	move_and_slide()
+	#Comprueba si tenemos que seguir andando o hemos acabado y hay que 
+	#coger de nuevo la posicion del jugador
+	if not $NavigationAgent3D.is_navigation_finished():
+		#Coge la direccion a la proxima pista del navmesh, hacia el jugador
+		var direction = $NavigationAgent3D.get_next_path_position() - position
+		direction.y = 0. 
+		velocity = delta * speed * direction.normalized()
+		
+		#Rotacion hacia donde esta andando
+		var look_direction = Vector2(velocity.z, velocity.x)
+		$main_mesh.rotation.y = look_direction.angle()
+		
+		#Mover y colisionar
+		move_and_slide()
+	else:
+		$NavigationAgent3D.target_position = player.position
 
 
 func _on_update_target_timeout() -> void:

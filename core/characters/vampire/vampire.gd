@@ -30,17 +30,23 @@ func _physics_process(delta: float) -> void:
 	
 	#Mientras estamos cazando...
 	if state == CHASE:
-		#Coge la direccion a la proxima pista del navmesh, hacia el jugador
-		var direction = $nav.get_next_path_position() - position
-		direction.y = 0. 
-		velocity = delta * speed * direction.normalized()
-		
-		#Rotacion hacia donde esta andando
-		var look_direction = Vector2(velocity.z, velocity.x)
-		$main_mesh.rotation.y = look_direction.angle()
-		
-		#Mover y colisionar
-		move_and_slide()
+		#Mirar si hemos llegado al punto de destino
+		if not $nav.is_navigation_finished():
+			#Coge la direccion a la proxima pista del navmesh, hacia el jugador
+			var direction = $nav.get_next_path_position() - position
+			direction.y = 0. 
+			
+			velocity = delta * speed * direction.normalized()
+			
+			#Rotacion hacia donde esta andando
+			var look_direction = Vector2(velocity.z, velocity.x)
+			$main_mesh.rotation.y = look_direction.angle()
+			
+			#Mover y colisionar
+			move_and_slide()
+		#Una vez hemos llegado, actualizar de nuevo la posicion del player
+		else:
+			$nav.target_position = player.position
 	else:
 		#Estamos esperando durante la teletransportacion
 		elapsed_time += delta 

@@ -36,7 +36,7 @@ func victory():
 func defeat():
 	get_tree().paused = true 
 	ui.show_results(false)
-	
+
 func resetear_valores():
 	collected_pumpkins = 0
 	tiempo = 0
