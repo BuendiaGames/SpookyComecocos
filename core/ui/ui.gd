@@ -28,7 +28,10 @@ func show_key():
 
 func show_results(victory = true):
 	if not victory:
+		GameManager.play_background_song("defeat")
 		$results/container_results/results.text = "You were caught!"
+	else:
+		GameManager.play_background_song("victory")
 	$results/container_results/container/points.text= str(GameManager.collected_pumpkins)+"/"+str(max_pumpkins)
 	var min_juego = int(GameManager.tiempo/60)
 	var seg_juego = int(GameManager.tiempo)%60
@@ -47,5 +50,5 @@ func show_results(victory = true):
 
 
 func _on_back_pressed() -> void:
-	print("askfsjañklfjka")
+	GameManager.play_background_song("menu")
 	GameManager.load_menu()

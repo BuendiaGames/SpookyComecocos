@@ -8,9 +8,21 @@ var tiempo = 0
 #Escena actual. Tendra que ser el menu. #TODO
 var current_scene = null
 
+var musicplayer = null
+
 func _ready() -> void:
+	musicplayer = AudioStreamPlayer.new()
+	add_child(musicplayer)
+	
+	play_background_song("menu")
+	
 	set_process(false)
 	set_physics_process(false)
+
+func play_background_song(name):
+	musicplayer.stop()
+	musicplayer.stream = load("res://music/spooky_"+name+".ogg")
+	musicplayer.play()
 
 #Permite saber al GameManager la existencia de nuestra UI para poder actualizarla
 func link_to_ui(ui_nodo : Control):
