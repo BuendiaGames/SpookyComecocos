@@ -13,7 +13,7 @@ dest_files=["res://.godot/imported/spooky_main.ogg-e9d8a5b514820e65ab349dfe41772
 [params]
 
 loop=true
-loop_offset=50.526
+loop_offset=30.315
 bpm=0
 beat_count=0
 bar_beats=4
