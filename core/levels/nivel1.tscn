@@ -3386,7 +3386,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.4183, 0, 25)
 curve = SubResource("Curve3D_k8baj")
 
 [node name="pathfollower" type="PathFollow3D" parent="Node3D/ghost_route"]
-transform = Transform3D(-0.813727, 0, 0.581215, 0, 1, 0, -0.581215, 0, -0.813727, 25.9344, 0, 9.33373)
+transform = Transform3D(-0.813736, 0, 0.581202, 0, 1, 0, -0.581202, 0, -0.813736, 25.9344, 0, 9.33373)
 
 [node name="ghost" parent="Node3D/ghost_route/pathfollower" instance=ExtResource("53_4va81")]
 transform = Transform3D(-1, 0, -8.74229e-08, 0, 1, 0, 8.74229e-08, 0, -1, 0, 0, 0)
@@ -3407,7 +3407,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43.5385, 0, 5.24514)
 curve = SubResource("Curve3D_8htpy")
 
 [node name="pathfollower" type="PathFollow3D" parent="Node3D/ghost_route2"]
-transform = Transform3D(-0.0576702, 0, -0.998317, 0, 1, 0, 0.998317, 0, -0.0576702, 19.8006, 0, 29.3051)
+transform = Transform3D(-0.0576659, 0, -0.998317, 0, 1, 0, 0.998317, 0, -0.0576659, 19.8006, 0, 29.3051)
 
 [node name="ghost" parent="Node3D/ghost_route2/pathfollower" instance=ExtResource("53_4va81")]
 transform = Transform3D(-1, 0, -8.74229e-08, 0, 1, 0, 8.74229e-08, 0, -1, 0, 0, 0)
@@ -3416,7 +3416,7 @@ transform = Transform3D(-1, 0, -8.74229e-08, 0, 1, 0, 8.74229e-08, 0, -1, 0, 0, 
 curve = SubResource("Curve3D_2ew85")
 
 [node name="pathfollower" type="PathFollow3D" parent="Node3D/ghost_route3"]
-transform = Transform3D(-0.173077, 0, 0.98489, 0, 1, 0, -0.98489, 0, -0.173077, 9.10797, 0, 11.7591)
+transform = Transform3D(-0.17308, 0, 0.984889, 0, 1, 0, -0.984889, 0, -0.17308, 9.10797, 0, 11.7591)
 
 [node name="ghost" parent="Node3D/ghost_route3/pathfollower" instance=ExtResource("53_4va81")]
 transform = Transform3D(-1, 0, -8.74229e-08, 0, 1, 0, 8.74229e-08, 0, -1, 0, 0, 0)
