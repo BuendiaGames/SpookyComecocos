@@ -64,6 +64,7 @@ func _on_howtoplay_pressed() -> void:
 
 
 func _on_controls_pressed() -> void:
+	GameManager.play_sound("menu")
 	$backgroundtext/columns/center/start.hide()
 	$backgroundtext/columns/center/credits.hide()
 	$backgroundtext/columns/center/howtoplay.hide()
@@ -78,6 +79,8 @@ func _on_controls_pressed() -> void:
 
 
 func _on_activ_joystick_pressed() -> void:
+	GameManager.play_sound("menu")
+	
 	var texto = "Joystick is currently deactivated."
 	var texto_boton = "Activate joystick"
 	

@@ -20,6 +20,7 @@ func _ready() -> void:
 	
 	sfxplayer = AudioStreamPlayer.new()
 	sfxplayer.max_polyphony = 4
+	sfxplayer.volume_db = 2
 	add_child(sfxplayer)
 	
 	play_background_song("menu")
@@ -36,7 +37,7 @@ func play_sound(sound):
 
 func play_background_song(name):
 	musicplayer.stop()
-	#musicplayer.stream = load("res://music/spooky_"+name+".ogg")
+	musicplayer.stream = load("res://music/spooky_"+name+".ogg")
 	musicplayer.play()
 
 #Permite saber al GameManager la existencia de nuestra UI para poder actualizarla

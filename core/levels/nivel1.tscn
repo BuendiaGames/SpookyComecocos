@@ -170,7 +170,7 @@ size = Vector3(4.07871, 1, 0.332147)
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_qhacl"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c7yld"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_keat8"]
 albedo_texture = ExtResource("39_o7ycf")
 roughness_texture = SubResource("NoiseTexture2D_qhacl")
 roughness_texture_channel = 4
@@ -178,7 +178,7 @@ heightmap_enabled = true
 heightmap_texture = SubResource("NoiseTexture2D_m02yr")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_efob6"]
-material = SubResource("StandardMaterial3D_c7yld")
+material = SubResource("StandardMaterial3D_keat8")
 size = Vector2(70, 70)
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_xk3ba"]
@@ -238,12 +238,12 @@ sky_horizon_color = Color(0.160784, 0.176471, 0.427451, 1)
 ground_horizon_color = Color(0.161334, 0.176128, 0.428211, 1)
 ground_curve = 1.2364
 
-[sub_resource type="Sky" id="Sky_m7gm7"]
+[sub_resource type="Sky" id="Sky_wunbw"]
 sky_material = SubResource("ProceduralSkyMaterial_67e0l")
 
 [sub_resource type="Environment" id="Environment_wrtt5"]
 background_mode = 2
-sky = SubResource("Sky_m7gm7")
+sky = SubResource("Sky_wunbw")
 sky_custom_fov = 27.9
 fog_enabled = true
 fog_light_color = Color(0.434034, 0.553164, 0.753305, 1)
