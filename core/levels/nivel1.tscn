@@ -1,5 +1,6 @@
-[gd_scene load_steps=125 format=3 uid="uid://biibogixogake"]
+[gd_scene load_steps=127 format=3 uid="uid://biibogixogake"]
 
+[ext_resource type="Script" path="res://core/levels/nivel_1.gd" id="1_8sl2f"]
 [ext_resource type="PackedScene" uid="uid://ftboyhub4agj" path="res://3dmodels/iron-fence-border.glb" id="1_oyn0n"]
 [ext_resource type="PackedScene" uid="uid://cc4acm4ynfxt7" path="res://3dmodels/iron-fence-border-curve.glb" id="2_wgod8"]
 [ext_resource type="PackedScene" uid="uid://bhx7gr4poe1vx" path="res://3dmodels/altar-stone.glb" id="3_5hdl6"]
@@ -55,6 +56,7 @@
 [ext_resource type="PackedScene" uid="uid://62yf7c7xapgl" path="res://core/characters/ghost/ghost.tscn" id="53_4va81"]
 [ext_resource type="PackedScene" uid="uid://b6jhmxs5usgca" path="res://core/characters/zombi/zombi.tscn" id="54_w4a4b"]
 [ext_resource type="PackedScene" uid="uid://brracca53ddlb" path="res://core/characters/skeleton/skeleton.tscn" id="55_kjagl"]
+[ext_resource type="PackedScene" uid="uid://clinfnq632qae" path="res://ui/touch_controls.tscn" id="56_woiv0"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_febsr"]
 size = Vector3(2.4336, 1, 5.89072)
@@ -270,6 +272,7 @@ _data = {
 point_count = 20
 
 [node name="Node3D" type="Node3D"]
+script = ExtResource("1_8sl2f")
 
 [node name="escenario" type="Node3D" parent="."]
 
@@ -3435,3 +3438,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.7294, 0, 7.68165)
 
 [node name="skeleto6" parent="Node3D" instance=ExtResource("55_kjagl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.47065, 0, 20.9603)
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TouchControls" parent="Control" instance=ExtResource("56_woiv0")]
+process_mode = 3
+visible = false

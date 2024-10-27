@@ -50,11 +50,40 @@ theme_override_fonts/font = ExtResource("2_fyu4g")
 theme_override_font_sizes/font_size = 30
 text = "how to play"
 
+[node name="controls" type="Button" parent="backgroundtext/columns/center"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_fyu4g")
+theme_override_font_sizes/font_size = 30
+text = "CONTROLS"
+
 [node name="credits" type="Button" parent="backgroundtext/columns/center"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_fyu4g")
 theme_override_font_sizes/font_size = 30
 text = "Credits"
+
+[node name="controls_text" type="RichTextLabel" parent="backgroundtext/columns/center"]
+visible = false
+layout_mode = 2
+bbcode_enabled = true
+text = "[center][b]Controls[/b]
+
+Press the button to activate or deactivate the joystick on screen."
+fit_content = true
+
+[node name="controls_text2" type="RichTextLabel" parent="backgroundtext/columns/center"]
+visible = false
+layout_mode = 2
+bbcode_enabled = true
+text = "Joystick is currently deactivated."
+fit_content = true
+
+[node name="activ_joystick" type="Button" parent="backgroundtext/columns/center"]
+visible = false
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_fyu4g")
+theme_override_font_sizes/font_size = 30
+text = "Activate joystick"
 
 [node name="credits_text" type="RichTextLabel" parent="backgroundtext/columns/center"]
 visible = false
@@ -108,5 +137,7 @@ size_flags_horizontal = 3
 
 [connection signal="pressed" from="backgroundtext/columns/center/start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="backgroundtext/columns/center/howtoplay" to="." method="_on_howtoplay_pressed"]
+[connection signal="pressed" from="backgroundtext/columns/center/controls" to="." method="_on_controls_pressed"]
 [connection signal="pressed" from="backgroundtext/columns/center/credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="backgroundtext/columns/center/activ_joystick" to="." method="_on_activ_joystick_pressed"]
 [connection signal="pressed" from="backgroundtext/columns/center/back" to="." method="_on_back_pressed"]

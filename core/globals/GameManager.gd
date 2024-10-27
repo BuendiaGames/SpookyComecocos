@@ -5,6 +5,8 @@ var collected_pumpkins = 0
 var ui = null
 var tiempo = 0
 
+var joystick_activado = false
+
 #Escena actual. Tendra que ser el menu. #TODO
 var current_scene = null
 
@@ -24,6 +26,7 @@ func _ready() -> void:
 	
 	set_process(false)
 	set_physics_process(false)
+	
 
 func play_sound(sound):
 	if sound != currentsfx:
