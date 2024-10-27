@@ -2241,126 +2241,167 @@ mesh = SubResource("PlaneMesh_efob6")
 
 [node name="road" parent="suelo" instance=ExtResource("39_tkv4c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.0126, 0, 11.5779)
+visible = false
 
 [node name="road2" parent="suelo" instance=ExtResource("39_tkv4c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.0126, 0, 12.5779)
+visible = false
 
 [node name="road3" parent="suelo" instance=ExtResource("39_tkv4c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.0126, 0, 13.5779)
+visible = false
 
 [node name="road4" parent="suelo" instance=ExtResource("39_tkv4c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.0126, 0, 14.5779)
+visible = false
 
 [node name="road5" parent="suelo" instance=ExtResource("39_tkv4c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.0126, 0, 14.5779)
+visible = false
 
 [node name="road6" parent="suelo" instance=ExtResource("39_tkv4c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.0126, 0, 14.5779)
+visible = false
 
 [node name="road7" parent="suelo" instance=ExtResource("39_tkv4c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.0126, 0, 14.5779)
+visible = false
 
 [node name="road8" parent="suelo" instance=ExtResource("39_tkv4c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.0126, 0, 15.5779)
+visible = false
 
 [node name="road9" parent="suelo" instance=ExtResource("39_tkv4c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.0126, 0, 16.5779)
+visible = false
 
 [node name="road10" parent="suelo" instance=ExtResource("39_tkv4c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.0126, 0, 16.5779)
+visible = false
 
 [node name="road11" parent="suelo" instance=ExtResource("39_tkv4c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.0126, 0, 16.5779)
+visible = false
 
 [node name="road12" parent="suelo" instance=ExtResource("39_tkv4c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.0126, 0, 16.5779)
+visible = false
 
 [node name="road13" parent="suelo" instance=ExtResource("39_tkv4c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.0126, 0, 16.5779)
+visible = false
 
 [node name="road14" parent="suelo" instance=ExtResource("39_tkv4c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.0126, 0, 16.5779)
+visible = false
 
 [node name="road15" parent="suelo" instance=ExtResource("39_tkv4c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.0126, 0, 16.5779)
+visible = false
 
 [node name="road16" parent="suelo" instance=ExtResource("39_tkv4c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.0126, 0, 16.5779)
+visible = false
 
 [node name="road17" parent="suelo" instance=ExtResource("39_tkv4c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.0126, 0, 16.5779)
+visible = false
 
 [node name="road18" parent="suelo" instance=ExtResource("39_tkv4c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.0126, 0, 16.5779)
+visible = false
 
 [node name="road19" parent="suelo" instance=ExtResource("39_tkv4c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.0126, 0, 16.5779)
+visible = false
 
 [node name="road20" parent="suelo" instance=ExtResource("39_tkv4c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.0126, 0, 16.5779)
+visible = false
 
 [node name="road21" parent="suelo" instance=ExtResource("39_tkv4c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.0126, 0, 15.5779)
+visible = false
 
 [node name="road22" parent="suelo" instance=ExtResource("39_tkv4c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.0126, 0, 14.5779)
+visible = false
 
 [node name="road23" parent="suelo" instance=ExtResource("39_tkv4c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.0126, 0, 13.5779)
+visible = false
 
 [node name="road24" parent="suelo" instance=ExtResource("39_tkv4c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.0126, 0, 13.5779)
+visible = false
 
 [node name="road25" parent="suelo" instance=ExtResource("39_tkv4c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.0126, 0, 13.5779)
+visible = false
 
 [node name="road26" parent="suelo" instance=ExtResource("39_tkv4c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.0126, 0, 13.5779)
+visible = false
 
 [node name="road27" parent="suelo" instance=ExtResource("39_tkv4c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.0126, 0, 13.5779)
+visible = false
 
 [node name="road28" parent="suelo" instance=ExtResource("39_tkv4c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.0126, 0, 13.5779)
+visible = false
 
 [node name="road29" parent="suelo" instance=ExtResource("39_tkv4c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.01256, 0, 13.5779)
+visible = false
 
 [node name="road30" parent="suelo" instance=ExtResource("39_tkv4c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.01256, 0, 13.5779)
+visible = false
 
 [node name="road31" parent="suelo" instance=ExtResource("39_tkv4c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.01256, 0, 13.5779)
+visible = false
 
 [node name="road32" parent="suelo" instance=ExtResource("39_tkv4c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.01256, 0, 13.5779)
+visible = false
 
 [node name="road33" parent="suelo" instance=ExtResource("39_tkv4c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.01256, 0, 13.5779)
+visible = false
 
 [node name="road34" parent="suelo" instance=ExtResource("39_tkv4c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.01256, 0, 13.5779)
+visible = false
 
 [node name="road35" parent="suelo" instance=ExtResource("39_tkv4c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.01256, 0, 13.5779)
+visible = false
 
 [node name="road36" parent="suelo" instance=ExtResource("39_tkv4c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.01256, 0, 14.5779)
+visible = false
 
 [node name="road37" parent="suelo" instance=ExtResource("39_tkv4c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.01256, 0, 15.5779)
+visible = false
 
 [node name="road38" parent="suelo" instance=ExtResource("39_tkv4c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.01256, 0, 16.5779)
+visible = false
 
 [node name="road39" parent="suelo" instance=ExtResource("39_tkv4c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.01256, 0, 17.5779)
+visible = false
 
 [node name="road40" parent="suelo" instance=ExtResource("39_tkv4c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.01256, 0, 18.5779)
+visible = false
 
 [node name="road41" parent="suelo" instance=ExtResource("39_tkv4c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.01256, 0, 18.5779)
+visible = false
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
 visible = false
@@ -3391,3 +3432,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.8808, 0, 37.7949)
 
 [node name="skeleto5" parent="Node3D" instance=ExtResource("55_kjagl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.7294, 0, 7.68165)
+
+[node name="skeleto6" parent="Node3D" instance=ExtResource("55_kjagl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.47065, 0, 20.9603)
