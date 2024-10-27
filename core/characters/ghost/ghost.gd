@@ -1,7 +1,7 @@
 extends CharacterBody3D
 
 #Velocidad del fantasma
-const SPEED = 0.1
+const SPEED = 0.06
 
 #El objeto pathfollow
 var ghostpath = null

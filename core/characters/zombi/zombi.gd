@@ -1,7 +1,7 @@
 extends CharacterBody3D
 
 #Velocidad de movimiento del vampiro
-const speed = 50.0
+const speed = 55.0
 const threshold_direct = 2
 
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=124 format=3 uid="uid://biibogixogake"]
+[gd_scene load_steps=125 format=3 uid="uid://biibogixogake"]
 
 [ext_resource type="PackedScene" uid="uid://ftboyhub4agj" path="res://3dmodels/iron-fence-border.glb" id="1_oyn0n"]
 [ext_resource type="PackedScene" uid="uid://cc4acm4ynfxt7" path="res://3dmodels/iron-fence-border-curve.glb" id="2_wgod8"]
@@ -54,6 +54,7 @@
 [ext_resource type="PackedScene" uid="uid://cpkvpuyij6rgi" path="res://3dmodels/pine-fall.glb" id="52_mngep"]
 [ext_resource type="PackedScene" uid="uid://62yf7c7xapgl" path="res://core/characters/ghost/ghost.tscn" id="53_4va81"]
 [ext_resource type="PackedScene" uid="uid://b6jhmxs5usgca" path="res://core/characters/zombi/zombi.tscn" id="54_w4a4b"]
+[ext_resource type="PackedScene" uid="uid://brracca53ddlb" path="res://core/characters/skeleton/skeleton.tscn" id="55_kjagl"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_febsr"]
 size = Vector3(2.4336, 1, 5.89072)
@@ -2611,7 +2612,7 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 35.75,
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 24.9952, 0, 32.3688)
 
 [node name="pumpkin-tall-carved2" parent="deco" instance=ExtResource("44_y0mrj")]
-transform = Transform3D(0.985888, 0, -0.167405, 0, 1, 0, 0.167405, 0, 0.985888, 10.7682, 0, 12.9039)
+transform = Transform3D(0.985888, 0, -0.167405, 0, 1, 0, 0.167405, 0, 0.985888, 12.1182, 0, 9.95297)
 
 [node name="pumpkin-tall-carved3" parent="deco" instance=ExtResource("44_y0mrj")]
 transform = Transform3D(0.985888, 0, -0.167405, 0, 1, 0, 0.167405, 0, 0.985888, 23.6831, 0, 21.7081)
@@ -3332,7 +3333,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.6712, 0, 6.56409)
 [node name="Node3D" type="Node3D" parent="."]
 
 [node name="vampire" parent="Node3D" instance=ExtResource("39_x5yg4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, 25)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, 27.1974)
 
 [node name="vampire2" parent="Node3D" instance=ExtResource("39_x5yg4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.4183, 0, 25)
@@ -3350,7 +3351,7 @@ transform = Transform3D(-1, 0, -8.74229e-08, 0, 1, 0, 8.74229e-08, 0, -1, 0, 0, 
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.70139, 0, 7.6464)
 
 [node name="zombi4" parent="Node3D" instance=ExtResource("54_w4a4b")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.6304, 0, 30.1598)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.73361, 0, 33.0782)
 
 [node name="zombi2" parent="Node3D" instance=ExtResource("54_w4a4b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43.5385, 0, 28.6934)
@@ -3375,3 +3376,18 @@ transform = Transform3D(-0.173077, 0, 0.98489, 0, 1, 0, -0.98489, 0, -0.173077, 
 
 [node name="ghost" parent="Node3D/ghost_route3/pathfollower" instance=ExtResource("53_4va81")]
 transform = Transform3D(-1, 0, -8.74229e-08, 0, 1, 0, 8.74229e-08, 0, -1, 0, 0, 0)
+
+[node name="skeleto" parent="Node3D" instance=ExtResource("55_kjagl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.3664, 0, 25.384)
+
+[node name="skeleto2" parent="Node3D" instance=ExtResource("55_kjagl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.3298, 0, 10.899)
+
+[node name="skeleto3" parent="Node3D" instance=ExtResource("55_kjagl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.2823, 0, 29.5343)
+
+[node name="skeleto4" parent="Node3D" instance=ExtResource("55_kjagl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.8808, 0, 37.7949)
+
+[node name="skeleto5" parent="Node3D" instance=ExtResource("55_kjagl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.7294, 0, 7.68165)
