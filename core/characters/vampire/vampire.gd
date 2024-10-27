@@ -3,6 +3,8 @@ extends CharacterBody3D
 #Velocidad de movimiento del vampiro
 const speed = 250.0
 
+const threshold_direct = 2
+
 #Maquina de estados. El vampiro puede estar cazando o teletransportarse.
 #Mientras se teletransporta se queda parado en el sitio durante un ratito.
 enum {CHASE, TELEPORT}
@@ -24,18 +26,35 @@ func _ready() -> void:
 	player = get_tree().get_first_node_in_group("player")
 	teleporters = get_tree().get_nodes_in_group("teleporters")
 	$main_mesh/AnimationPlayer.play("walk")
+	
+	randomize()
+	$teleport.start(randf() * 20.0)
 
 
 func _physics_process(delta: float) -> void:
-	
 	#Mientras estamos cazando...
 	if state == CHASE:
-		#Mirar si hemos llegado al punto de destino
-		if not $nav.is_navigation_finished():
-			#Coge la direccion a la proxima pista del navmesh, hacia el jugador
-			var direction = $nav.get_next_path_position() - position
-			direction.y = 0. 
-			
+		if position.distance_squared_to(player.position) > threshold_direct:
+			#Mirar si hemos llegado al punto de destino
+			if not $nav.is_navigation_finished():
+				#Coge la direccion a la proxima pista del navmesh, hacia el jugador
+				var direction = $nav.get_next_path_position() - position
+				direction.y = 0. 
+				
+				velocity = delta * speed * direction.normalized()
+				
+				#Rotacion hacia donde esta andando
+				var look_direction = Vector2(velocity.z, velocity.x)
+				$main_mesh.rotation.y = look_direction.angle()
+				
+				#Mover y colisionar
+				move_and_slide()
+			#Una vez hemos llegado, actualizar de nuevo la posicion del player
+			else:
+				$nav.target_position = player.position
+				
+		else:
+			var direction = player.position - position
 			velocity = delta * speed * direction.normalized()
 			
 			#Rotacion hacia donde esta andando
@@ -44,9 +63,6 @@ func _physics_process(delta: float) -> void:
 			
 			#Mover y colisionar
 			move_and_slide()
-		#Una vez hemos llegado, actualizar de nuevo la posicion del player
-		else:
-			$nav.target_position = player.position
 	else:
 		#Estamos esperando durante la teletransportacion
 		elapsed_time += delta 
