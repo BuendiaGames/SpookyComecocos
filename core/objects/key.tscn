@@ -1,8 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://05k15pqpfj2e"]
+[gd_scene load_steps=10 format=3 uid="uid://05k15pqpfj2e"]
 
 [ext_resource type="Script" path="res://core/objects/key.gd" id="1_ihnd2"]
 [ext_resource type="PackedScene" uid="uid://bfscai2tjgs0" path="res://3dmodels/key.glb" id="1_w031o"]
-[ext_resource type="Script" path="res://core/objects/particles.gd" id="3_u8qi0"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_4xdoa"]
 radius = 0.2
@@ -95,6 +94,5 @@ scale_amount_min = 0.3
 scale_amount_max = 1.2
 scale_amount_curve = SubResource("Curve_in3dd")
 color = Color(0, 0.526605, 0.677572, 1)
-script = ExtResource("3_u8qi0")
 
 [connection signal="finished" from="particles" to="." method="_on_particles_finished"]

@@ -2632,7 +2632,7 @@ light_bake_mode = 1
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.2416, 0, 5.73346)
 
 [node name="camera" type="Camera3D" parent="player"]
-transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 2.5, 2.86602)
+transform = Transform3D(1, 0, 0, 0, 0.787344, 0.616514, 0, -0.616514, 0.787344, 0, 3.25198, 4.48021)
 
 [node name="UI" type="CanvasLayer" parent="."]
 
