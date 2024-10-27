@@ -1,6 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://05k15pqpfj2e"]
+[gd_scene load_steps=11 format=3 uid="uid://05k15pqpfj2e"]
 
+[ext_resource type="Script" path="res://core/objects/key.gd" id="1_ihnd2"]
 [ext_resource type="PackedScene" uid="uid://bfscai2tjgs0" path="res://3dmodels/key.glb" id="1_w031o"]
+[ext_resource type="Script" path="res://core/objects/particles.gd" id="3_u8qi0"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_4xdoa"]
 radius = 0.2
@@ -43,7 +45,21 @@ _data = {
 "idle": SubResource("Animation_1kdfc")
 }
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ptco8"]
+albedo_color = Color(0.952941, 0.909804, 0.372549, 1)
+emission_enabled = true
+emission = Color(0.821333, 0.726631, 0.356336, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_ld8xn"]
+radius = 0.03
+height = 0.05
+
+[sub_resource type="Curve" id="Curve_in3dd"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.511236, 0.648352), -1.03236, -1.03236, 0, 0, Vector2(0.994382, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
 [node name="key" type="Area3D" groups=["llave"]]
+script = ExtResource("1_ihnd2")
 
 [node name="key2" parent="." groups=["llave"] instance=ExtResource("1_w031o")]
 
@@ -56,3 +72,29 @@ libraries = {
 "": SubResource("AnimationLibrary_yj3bw")
 }
 autoplay = "idle"
+
+[node name="particles" type="CPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.102745, 0)
+material_override = SubResource("StandardMaterial3D_ptco8")
+emitting = false
+amount = 30
+lifetime = 0.5
+one_shot = true
+explosiveness = 1.0
+lifetime_randomness = 0.1
+mesh = SubResource("SphereMesh_ld8xn")
+emission_shape = 1
+emission_sphere_radius = 0.3
+spread = 180.0
+flatness = 1.0
+gravity = Vector3(0, 0, 0)
+initial_velocity_min = 0.5
+initial_velocity_max = 1.0
+linear_accel_min = -1.0
+scale_amount_min = 0.3
+scale_amount_max = 1.2
+scale_amount_curve = SubResource("Curve_in3dd")
+color = Color(0, 0.526605, 0.677572, 1)
+script = ExtResource("3_u8qi0")
+
+[connection signal="finished" from="particles" to="." method="_on_particles_finished"]

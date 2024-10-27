@@ -62,10 +62,11 @@ func _on_area_3d_area_entered(area: Area3D) -> void:
 	if area.is_in_group("calabazas"):
 		GameManager.play_sound("pumpkin")
 		GameManager.collect_pumpkin()
-		area.queue_free()
+		area.emit_effect_and_kill()
+		#area.queue_free()
 	elif area.is_in_group("llave"):
 		GameManager.play_sound("key")
-		area.queue_free()
+		area.emit_effect_and_kill()
 		tiene_llave = true
 		var mausoleito = get_tree().get_first_node_in_group("mausoleos")
 		mausoleito.abrir_y_cerrar_puerta()

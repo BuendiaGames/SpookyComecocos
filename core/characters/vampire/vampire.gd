@@ -20,6 +20,9 @@ var teleported = false
 const wait_time = 0.75
 const resume_time = 1.0
 
+#Para tirar bombas de humo
+var smokebomb = preload("res://core/characters/vampire/bombahumo.tscn")
+
 #Coge las instancias del jugador y teletransprtadores
 func _ready() -> void:
 	add_to_group("monstruos")
@@ -68,18 +71,27 @@ func _physics_process(delta: float) -> void:
 		elapsed_time += delta 
 		
 		#Esperar un poco antes de teletransportar para hacer una animacion
-		#TODO bomba de humo
 		if elapsed_time >= wait_time && not teleported:
+			#Tira una bomba de humo antes del teletransporte
+			tirar_bomba_humo()
+			
 			#Elegir un teletransportador al azar
 			var index = randi_range(0, len(teleporters)-1)
 			position = teleporters[index].position 
 			teleported = true
+			#Una vez hemos actualizado la posicion, hacemos lo mismo
+			tirar_bomba_humo()
 		#Esperar un poquito tras teletransportarse y reinicar el estado de caza
 		elif elapsed_time >= resume_time:
 			$nav.target_position = player.position
 			$teleport.start()
 			$main_mesh/AnimationPlayer.play("walk")
 			state = CHASE
+
+func tirar_bomba_humo():
+	var bombahumo = smokebomb.instantiate()
+	bombahumo.position = position
+	get_parent().add_child(bombahumo)
 
 #Actualizar la posicion del navigation agent para que caze al personaje
 func _on_update_target_timeout() -> void:

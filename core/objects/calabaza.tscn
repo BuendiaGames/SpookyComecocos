@@ -1,5 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://i8evkc74g76n"]
+[gd_scene load_steps=10 format=3 uid="uid://i8evkc74g76n"]
 
+[ext_resource type="Script" path="res://core/objects/calabaza.gd" id="1_d0lxq"]
 [ext_resource type="PackedScene" uid="uid://ds44xglr2l5sd" path="res://3dmodels/pumpkin.glb" id="1_fv04t"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_4xdoa"]
@@ -67,7 +68,21 @@ _data = {
 "idle": SubResource("Animation_3siqd")
 }
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2wuwd"]
+albedo_color = Color(0.677464, 0.270314, 0.122873, 1)
+emission_enabled = true
+emission = Color(0.854902, 0.560784, 0.466667, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_cou2i"]
+radius = 0.05
+height = 0.1
+
+[sub_resource type="Curve" id="Curve_v0m0d"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.730337, 0.593407), -1.03236, -1.03236, 0, 0, Vector2(0.994382, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
 [node name="pumpkin" type="Area3D" groups=["calabazas"]]
+script = ExtResource("1_d0lxq")
 
 [node name="pumpkin2" parent="." instance=ExtResource("1_fv04t")]
 transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0, 0, 0)
@@ -81,3 +96,28 @@ libraries = {
 "": SubResource("AnimationLibrary_055ro")
 }
 autoplay = "RESET"
+
+[node name="particles" type="CPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0853271, 0)
+material_override = SubResource("StandardMaterial3D_2wuwd")
+emitting = false
+amount = 10
+lifetime = 0.3
+one_shot = true
+explosiveness = 1.0
+lifetime_randomness = 0.2
+mesh = SubResource("SphereMesh_cou2i")
+emission_shape = 1
+emission_sphere_radius = 0.2
+spread = 180.0
+flatness = 1.0
+gravity = Vector3(0, 0, 0)
+initial_velocity_min = 0.3
+initial_velocity_max = 0.7
+linear_accel_min = -1.0
+scale_amount_min = 0.3
+scale_amount_max = 1.2
+scale_amount_curve = SubResource("Curve_v0m0d")
+color = Color(0, 0.526605, 0.677572, 1)
+
+[connection signal="finished" from="particles" to="." method="_on_particles_finished"]

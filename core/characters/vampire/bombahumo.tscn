@@ -1,0 +1,64 @@
+[gd_scene load_steps=7 format=3 uid="uid://cywfapcv04dk0"]
+
+[ext_resource type="Script" path="res://core/characters/vampire/bombahumo.gd" id="1_0r23s"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vjk8g"]
+albedo_color = Color(0.392942, 0.359769, 0.379172, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ibu4a"]
+size = Vector3(0.5, 0.5, 0.5)
+
+[sub_resource type="Curve" id="Curve_yn55e"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), -3.52088, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cgpgb"]
+albedo_color = Color(0.538527, 0.511844, 0.49398, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_h66b4"]
+size = Vector3(0.1, 0.3, 0.1)
+
+[node name="bombahumo" type="Node3D"]
+script = ExtResource("1_0r23s")
+
+[node name="particles1" type="CPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.111038, 0)
+material_override = SubResource("StandardMaterial3D_vjk8g")
+emitting = false
+lifetime = 1.2
+one_shot = true
+explosiveness = 0.3
+randomness = 0.5
+mesh = SubResource("BoxMesh_ibu4a")
+emission_shape = 6
+emission_ring_axis = Vector3(0, 0, 1)
+emission_ring_height = 1.0
+emission_ring_radius = 0.5
+emission_ring_inner_radius = 0.0
+direction = Vector3(0, 1, 0)
+spread = 150.0
+gravity = Vector3(0, 0.5, 0)
+initial_velocity_max = 0.1
+scale_amount_curve = SubResource("Curve_yn55e")
+
+[node name="particles2" type="CPUParticles3D" parent="."]
+material_override = SubResource("StandardMaterial3D_cgpgb")
+emitting = false
+amount = 12
+lifetime = 0.7
+one_shot = true
+explosiveness = 0.3
+randomness = 0.5
+mesh = SubResource("BoxMesh_h66b4")
+emission_shape = 6
+emission_ring_axis = Vector3(0, 0, 1)
+emission_ring_height = 1.5
+emission_ring_radius = 0.7
+emission_ring_inner_radius = 0.0
+direction = Vector3(0, 1, 0)
+spread = 180.0
+gravity = Vector3(0, 2, 0)
+initial_velocity_max = 0.1
+scale_amount_curve = SubResource("Curve_yn55e")
+
+[connection signal="finished" from="particles1" to="." method="_on_particles_1_finished"]
