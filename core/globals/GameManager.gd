@@ -9,15 +9,27 @@ var tiempo = 0
 var current_scene = null
 
 var musicplayer = null
+var sfxplayer = null
+var currentsfx = null
 
 func _ready() -> void:
 	musicplayer = AudioStreamPlayer.new()
 	add_child(musicplayer)
 	
+	sfxplayer = AudioStreamPlayer.new()
+	sfxplayer.max_polyphony = 4
+	add_child(sfxplayer)
+	
 	play_background_song("menu")
 	
 	set_process(false)
 	set_physics_process(false)
+
+func play_sound(sound):
+	if sound != currentsfx:
+		sfxplayer.stream = load("res://sfx/"+sound+".wav")
+	sfxplayer.play()
+
 
 func play_background_song(name):
 	musicplayer.stop()
