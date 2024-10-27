@@ -19,3 +19,4 @@ Comecocos spooky.
 ## Creditos
 
 Fuente de texto: BabyHalloween por Projecttype https://www.creativefabrica.com/designer/projectype/
+https://www.freepik.com/free-vector/earth-texture_997013.htm#fromView=keyword&page=1&position=0&uuid=6bb0b6f3-cdda-45ca-816f-462fb81e8791
