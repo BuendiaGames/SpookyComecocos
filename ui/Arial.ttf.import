@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://8hm11cyxoq2"
-path="res://.godot/imported/Baby Halloween.ttf-4ca5e7dbc7ec0a01f5a09dadd0ad9862.fontdata"
+uid="uid://xojvqr55t8at"
+path="res://.godot/imported/Arial.ttf-6a7f9973277a0ceb056c4f96e4ed1774.fontdata"
 
 [deps]
 
-source_file="res://ui/Baby Halloween.ttf"
-dest_files=["res://.godot/imported/Baby Halloween.ttf-4ca5e7dbc7ec0a01f5a09dadd0ad9862.fontdata"]
+source_file="res://ui/Arial.ttf"
+dest_files=["res://.godot/imported/Arial.ttf-6a7f9973277a0ceb056c4f96e4ed1774.fontdata"]
 
 [params]
 
@@ -25,7 +25,7 @@ hinting=1
 subpixel_positioning=1
 oversampling=0.0
 Fallbacks=null
-fallbacks=[Resource("res://ui/Arial.ttf")]
+fallbacks=[]
 Compress=null
 compress=true
 preload=[]
