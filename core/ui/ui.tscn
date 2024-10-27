@@ -52,7 +52,6 @@ layout_mode = 2
 texture = ExtResource("3_3s1p6")
 
 [node name="results" type="MarginContainer" parent="." groups=["nodo_ui"]]
-visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -74,7 +73,7 @@ theme_override_constants/separation = 30
 
 [node name="results" type="Label" parent="results/container_results"]
 layout_mode = 2
-text = "You scaped!"
+text = "You escaped!"
 label_settings = SubResource("LabelSettings_f44ay")
 
 [node name="container" type="HBoxContainer" parent="results/container_results"]

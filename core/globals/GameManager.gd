@@ -21,7 +21,7 @@ func _ready() -> void:
 
 func play_background_song(name):
 	musicplayer.stop()
-	musicplayer.stream = load("res://music/spooky_"+name+".ogg")
+	#musicplayer.stream = load("res://music/spooky_"+name+".ogg")
 	musicplayer.play()
 
 #Permite saber al GameManager la existencia de nuestra UI para poder actualizarla
