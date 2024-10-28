@@ -5,11 +5,11 @@ extends Node3D
 func _ready() -> void:
 	if GameManager.joystick_activado:
 		$Control/TouchControls.show()
-		$Control/TouchControls.process_mode = Node.PROCESS_MODE_ALWAYS
+		#$Control/TouchControls.process_mode = Node.PROCESS_MODE_ALWAYS
 
 	else:
 		$Control/TouchControls.hide()
-		$Control/TouchControls.process_mode = Node.PROCESS_MODE_DISABLED
+		#$Control/TouchControls.process_mode = Node.PROCESS_MODE_DISABLED
 	pass # Replace with function body.
 
 
