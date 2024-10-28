@@ -28,8 +28,9 @@ func _ready() -> void:
 	add_to_group("monstruos")
 	player = get_tree().get_first_node_in_group("player")
 	teleporters = get_tree().get_nodes_in_group("teleporters")
-	$main_mesh/AnimationPlayer.play("walk")
+	$main_mesh/AnimationPlayer.play("walk")	
 	
+
 	randomize()
 	$teleport.start(randf() * 20.0)
 

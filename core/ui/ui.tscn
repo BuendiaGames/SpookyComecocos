@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://dceipods5me4p"]
 
 [ext_resource type="Script" path="res://core/ui/ui.gd" id="1_o1l5f"]
-[ext_resource type="FontFile" uid="uid://cqv568bqk7oqy" path="res://ui/Baby Halloween.ttf" id="1_pf35w"]
+[ext_resource type="FontFile" uid="uid://eho7j505n3l5" path="res://ui/Baby Halloween.ttf" id="1_pf35w"]
 [ext_resource type="Texture2D" uid="uid://dho2ioridvy0c" path="res://ui/calabaza_ui.png" id="2_wjss8"]
 [ext_resource type="Texture2D" uid="uid://d3eqie5ohaon5" path="res://ui/llave_ui.png" id="3_3s1p6"]
 
