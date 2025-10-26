@@ -5,7 +5,7 @@
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j26wo"]
 albedo_color = Color(1, 0.690667, 0.36, 1)
 emission_enabled = true
-emission = Color(0.62912, 0.64, 0.3136, 1)
+emission = Color(0.8349365, 0.85015357, 0.5354, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_xxk8v"]
 material = SubResource("StandardMaterial3D_j26wo")
@@ -28,3 +28,27 @@ mesh = SubResource("BoxMesh_xxk8v")
 [node name="mesh4" type="MeshInstance3D" parent="." index="4"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.238519, 1.09, 0)
 mesh = SubResource("BoxMesh_xxk8v")
+
+[node name="light" type="OmniLight3D" parent="." index="5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.26789236, 1.096312, -0.010529131)
+light_color = Color(0.97862357, 0.8090853, 0.63443905, 1)
+light_size = 0.352
+omni_attenuation = 0.5
+
+[node name="light2" type="OmniLight3D" parent="." index="6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.26257586, 1.096312, -0.010529131)
+light_color = Color(0.97862357, 0.8090853, 0.63443905, 1)
+light_size = 0.352
+omni_attenuation = 0.5
+
+[node name="light3" type="OmniLight3D" parent="." index="7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00700593, 1.096312, -0.262719)
+light_color = Color(0.97862357, 0.8090853, 0.63443905, 1)
+light_size = 0.352
+omni_attenuation = 0.5
+
+[node name="light4" type="OmniLight3D" parent="." index="8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00700593, 1.096312, 0.25905272)
+light_color = Color(0.97862357, 0.8090853, 0.63443905, 1)
+light_size = 0.352
+omni_attenuation = 0.5

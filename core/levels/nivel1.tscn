@@ -225,7 +225,6 @@ size = Vector2(110, 110)
 [sub_resource type="BoxMesh" id="BoxMesh_pv5x1"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_67e0l"]
-sky_top_color = Color(0.0948532, 0.105548, 0.281471, 1)
 sky_horizon_color = Color(0.160784, 0.176471, 0.427451, 1)
 ground_horizon_color = Color(0.161334, 0.176128, 0.428211, 1)
 ground_curve = 1.2364
@@ -236,11 +235,13 @@ sky_material = SubResource("ProceduralSkyMaterial_67e0l")
 [sub_resource type="Environment" id="Environment_wrtt5"]
 background_mode = 2
 sky = SubResource("Sky_wunbw")
-sky_custom_fov = 27.9
+sky_custom_fov = 180.0
+tonemap_mode = 3
 fog_enabled = true
-fog_light_color = Color(0.434034, 0.553164, 0.753305, 1)
-fog_light_energy = 0.05
+fog_light_color = Color(0.2669206, 0.44056752, 0.54845166, 1)
+fog_light_energy = 0.4
 fog_density = 0.05
+volumetric_fog_density = 0.709
 
 [sub_resource type="Curve3D" id="Curve3D_k8baj"]
 _data = {
@@ -3378,7 +3379,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.4183, 0, 25)
 curve = SubResource("Curve3D_k8baj")
 
 [node name="pathfollower" type="PathFollow3D" parent="Node3D/ghost_route"]
-transform = Transform3D(-0.8137357, 0, 0.58120227, 0, 1, 0, -0.58120227, 0, -0.8137357, 25.9344, 0, 9.33373)
+transform = Transform3D(-0.8137357, 0, 0.5812022, 0, 1, 0, -0.5812022, 0, -0.8137357, 25.9344, 0, 9.33373)
 
 [node name="ghost" parent="Node3D/ghost_route/pathfollower" instance=ExtResource("53_4va81")]
 transform = Transform3D(-1, 0, -8.74229e-08, 0, 1, 0, 8.74229e-08, 0, -1, 0, 0, 0)
@@ -3399,7 +3400,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43.5385, 0, 5.24514)
 curve = SubResource("Curve3D_8htpy")
 
 [node name="pathfollower" type="PathFollow3D" parent="Node3D/ghost_route2"]
-transform = Transform3D(-0.05766591, 0, -0.99831706, 0, 1, 0, 0.99831706, 0, -0.05766591, 19.8006, 0, 29.3051)
+transform = Transform3D(-0.05766593, 0, -0.9983174, 0, 1, 0, 0.9983174, 0, -0.05766593, 19.8006, 0, 29.3051)
 
 [node name="ghost" parent="Node3D/ghost_route2/pathfollower" instance=ExtResource("53_4va81")]
 transform = Transform3D(-1, 0, -8.74229e-08, 0, 1, 0, 8.74229e-08, 0, -1, 0, 0, 0)

@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=4 uid="uid://0g1yokwjdysh"]
 
-[ext_resource type="Texture2D" uid="uid://bkjmqwp3qp8tw" path="res://3dmodels/Textures/colormap.png" id="1_nqho3"]
+[ext_resource type="Texture2D" uid="uid://c5gu8mtn6h2v" path="res://3dmodels/Textures/colormap.png" id="1_nqho3"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nf2wb"]
 resource_name = "colormap"
@@ -45,7 +45,7 @@ shadow_mesh = SubResource("ArrayMesh_gquua")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j26wo"]
 albedo_color = Color(1, 0.690667, 0.36, 1)
 emission_enabled = true
-emission = Color(0.62912, 0.64, 0.3136, 1)
+emission = Color(0.81844056, 0.8335164, 0.50782675, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_ass37"]
 material = SubResource("StandardMaterial3D_j26wo")
@@ -62,3 +62,9 @@ mesh = SubResource("ArrayMesh_wfgff")
 [node name="mesh" type="MeshInstance3D" parent="lightpost-single2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.08986, 0.237677)
 mesh = SubResource("BoxMesh_ass37")
+
+[node name="light" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.39472386, 1.1002728, 0.18134198)
+light_color = Color(0.8234826, 0.65183896, 0.65892404, 1)
+light_size = 0.352
+omni_range = 20.0

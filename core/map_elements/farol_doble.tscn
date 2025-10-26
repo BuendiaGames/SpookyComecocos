@@ -3,10 +3,10 @@
 [ext_resource type="PackedScene" uid="uid://belcn8gfjkp35" path="res://3dmodels/lightpost-double.glb" id="1_6w4ad"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j26wo"]
-albedo_color = Color(1, 0.690667, 0.36, 1)
+albedo_color = Color(0.8306666, 0.89, 0, 1)
 emission_enabled = true
-emission = Color(0.716577, 0.729016, 0.384899, 1)
-emission_energy_multiplier = 1.5
+emission = Color(0.7865494, 0.79952645, 0.45865357, 1)
+emission_energy_multiplier = 5.0
 
 [sub_resource type="BoxMesh" id="BoxMesh_tsmlj"]
 material = SubResource("StandardMaterial3D_j26wo")
@@ -21,3 +21,15 @@ mesh = SubResource("BoxMesh_tsmlj")
 [node name="mesh2" type="MeshInstance3D" parent="." index="2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.08986, -0.236804)
 mesh = SubResource("BoxMesh_tsmlj")
+
+[node name="light" type="OmniLight3D" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.009204745, 1.0383278, -0.36558637)
+light_color = Color(0.8642855, 0.649038, 0.49626505, 1)
+light_size = 0.333
+omni_range = 10.0
+
+[node name="light2" type="OmniLight3D" parent="." index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.009204745, 1.0383278, 0.353385)
+light_color = Color(0.8642855, 0.649038, 0.49626505, 1)
+light_size = 0.333
+omni_range = 10.0
