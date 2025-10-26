@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://begfwm0fvmber"]
 
-[ext_resource type="Script" path="res://core/menu/mainmenu.gd" id="1_mnh8q"]
+[ext_resource type="Script" uid="uid://dg07dttnnjhqp" path="res://core/menu/mainmenu.gd" id="1_mnh8q"]
 [ext_resource type="FontFile" uid="uid://eho7j505n3l5" path="res://ui/Baby Halloween.ttf" id="2_fyu4g"]
 [ext_resource type="Texture2D" uid="uid://cr60bxrlljj32" path="res://core/menu/background.png" id="2_sg8h6"]
 
@@ -14,8 +14,8 @@ grow_vertical = 2
 script = ExtResource("1_mnh8q")
 
 [node name="background" type="Sprite2D" parent="."]
-position = Vector2(590, 310)
-scale = Vector2(0.7, 0.7)
+position = Vector2(577, 326)
+scale = Vector2(0.84, 0.84)
 texture = ExtResource("2_sg8h6")
 
 [node name="backgroundtext" type="TextureRect" parent="."]

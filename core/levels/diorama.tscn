@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=3 uid="uid://ccsrwfh33jxht"]
+[gd_scene load_steps=54 format=3 uid="uid://ccsrwfh33jxht"]
 
 [ext_resource type="PackedScene" uid="uid://ftboyhub4agj" path="res://3dmodels/iron-fence-border.glb" id="1_a2n77"]
 [ext_resource type="PackedScene" uid="uid://cc4acm4ynfxt7" path="res://3dmodels/iron-fence-border-curve.glb" id="2_f61wq"]
@@ -41,7 +41,7 @@
 [ext_resource type="Texture2D" uid="uid://bm8s2yc3c8mwk" path="res://texturas/696.jpg" id="38_cg37r"]
 [ext_resource type="PackedScene" uid="uid://cpkvpuyij6rgi" path="res://3dmodels/pine-fall.glb" id="39_8r0m4"]
 [ext_resource type="PackedScene" uid="uid://b57tnj7jyfh63" path="res://3dmodels/road.glb" id="39_pwp2c"]
-[ext_resource type="PackedScene" uid="uid://83ygvrrfnfh1" path="res://3dmodels/character-digger.glb" id="42_a071i"]
+[ext_resource type="PackedScene" uid="uid://c25ovy6dat1if" path="res://3dmodels/character-keeper.glb" id="42_a42fd"]
 [ext_resource type="PackedScene" uid="uid://dqi7qe41m8cen" path="res://3dmodels/character-ghost.glb" id="43_p2hwx"]
 [ext_resource type="PackedScene" uid="uid://bckv31mtj4wx6" path="res://3dmodels/character-skeleton.glb" id="44_ljov1"]
 [ext_resource type="PackedScene" uid="uid://bo1vwecbannjf" path="res://3dmodels/character-vampire.glb" id="45_xs5q8"]
@@ -49,38 +49,30 @@
 [ext_resource type="PackedScene" uid="uid://0g1yokwjdysh" path="res://core/map_elements/farol.tscn" id="47_870bn"]
 [ext_resource type="PackedScene" uid="uid://b0bcui387vjx6" path="res://3dmodels/lightpost-all.glb" id="48_1mo5e"]
 
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_uev4c"]
-
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_4cjhf"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c7yld"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_okqxq"]
 albedo_texture = ExtResource("38_cg37r")
-roughness_texture = SubResource("NoiseTexture2D_4cjhf")
-roughness_texture_channel = 4
-heightmap_enabled = true
-heightmap_texture = SubResource("NoiseTexture2D_uev4c")
 
-[sub_resource type="PlaneMesh" id="PlaneMesh_rc8s5"]
-material = SubResource("StandardMaterial3D_c7yld")
+[sub_resource type="PlaneMesh" id="PlaneMesh_a42fd"]
+material = SubResource("StandardMaterial3D_okqxq")
 size = Vector2(70, 70)
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_lkrt7"]
-sky_top_color = Color(0.0948532, 0.105548, 0.281471, 1)
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_654pg"]
 sky_horizon_color = Color(0.160784, 0.176471, 0.427451, 1)
 ground_horizon_color = Color(0.161334, 0.176128, 0.428211, 1)
 ground_curve = 1.2364
 
-[sub_resource type="Sky" id="Sky_m7gm7"]
-sky_material = SubResource("ProceduralSkyMaterial_lkrt7")
+[sub_resource type="Sky" id="Sky_wunbw"]
+sky_material = SubResource("ProceduralSkyMaterial_654pg")
 
-[sub_resource type="Environment" id="Environment_0dxte"]
+[sub_resource type="Environment" id="Environment_ulko1"]
 background_mode = 2
-sky = SubResource("Sky_m7gm7")
-sky_custom_fov = 27.9
-fog_enabled = true
-fog_light_color = Color(0.434034, 0.553164, 0.753305, 1)
-fog_light_energy = 0.05
+sky = SubResource("Sky_wunbw")
+sky_custom_fov = 180.0
+tonemap_mode = 3
+fog_light_color = Color(0.2669206, 0.44056752, 0.54845166, 1)
+fog_light_energy = 0.4
 fog_density = 0.05
+volumetric_fog_density = 0.709
 
 [node name="Node3D" type="Node3D"]
 
@@ -2134,10 +2126,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.6712, 0, 6.56409)
 
 [node name="suelo" type="Node3D" parent="."]
 
-[node name="suelo" type="MeshInstance3D" parent="suelo"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.9988, 0, 27.6099)
-mesh = SubResource("PlaneMesh_rc8s5")
-
 [node name="road" parent="suelo" instance=ExtResource("39_pwp2c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.0126, 0, 11.5779)
 visible = false
@@ -2302,8 +2290,9 @@ visible = false
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.01256, 0, 18.5779)
 visible = false
 
-[node name="worldenvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_0dxte")
+[node name="suelo" type="MeshInstance3D" parent="suelo"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28, 0, 27)
+mesh = SubResource("PlaneMesh_a42fd")
 
 [node name="Moon" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.71847, 0.356907, 0.597008, -0.68632, 0.503193, 0.52513, -0.112988, -0.787029, 0.606481, 20.8402, 28.122, 48.0294)
@@ -2316,32 +2305,23 @@ light_bake_mode = 1
 transform = Transform3D(0.687924, 0.0337335, 0.724998, 1.64776e-09, 0.998919, -0.0464788, -0.725783, 0.0319739, 0.687181, 29.8233, 0.358156, 15.2684)
 fov = 36.6
 
-[node name="character-digger2" parent="." instance=ExtResource("42_a071i")]
-transform = Transform3D(0.905243, 0, 0.424895, 0, 1, 0, -0.424895, 0, 0.905243, 28.4725, -0.21076, 13.8403)
+[node name="character-keeper2" parent="." instance=ExtResource("42_a42fd")]
+transform = Transform3D(0.93434757, 0, 0.35636297, 0, 1, 0, -0.35636297, 0, 0.93434757, 28.336622, 0.08201395, 13.856942)
 
-[node name="character-digger" parent="character-digger2" index="0"]
-transform = Transform3D(0.99985, -0.0173334, 0.000320166, 0.0173334, 0.999168, -0.0369289, 0.000320166, 0.0369289, 0.999318, 0, 0.0829904, 0)
+[node name="leg-right" parent="character-keeper2/character-keeper/root" index="0"]
+transform = Transform3D(1, 0, 0, 0, 0.5538893, 0.83259034, 0, -0.83259034, 0.5538893, -0.0761, 0.22, -0.009)
 
-[node name="root" parent="character-digger2/character-digger" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.16875, 0)
+[node name="head" parent="character-keeper2/character-keeper/root/torso" index="0"]
+transform = Transform3D(1, 0, 0, 0, 0.9998772, -0.015668787, 0, 0.015668787, 0.9998772, 0, 0.22398207, 0)
 
-[node name="leg-left" parent="character-digger2/character-digger/root" index="0"]
-transform = Transform3D(1, 0, 0, 0, 0.24298, -0.970031, 0, 0.970031, 0.24298, 0.074204, 0.223184, -7.21911e-16)
+[node name="arm-right" parent="character-keeper2/character-keeper/root/torso" index="1"]
+transform = Transform3D(0.94275796, 0.33347777, 0, -0.33347777, 0.94275796, 0, 0, 0, 1, -0.125, 0.15, 0.0024999976)
 
-[node name="leg-right" parent="character-digger2/character-digger/root" index="1"]
-transform = Transform3D(1, 0, 0, 0, 0.24298, 0.970031, 0, -0.970031, 0.24298, -0.074204, 0.223184, -7.21911e-16)
+[node name="arm-left" parent="character-keeper2/character-keeper/root/torso" index="2"]
+transform = Transform3D(0.94275796, -0.33347777, 0, 0.33347777, 0.94275796, 0, 0, 0, 1, 0.125, 0.15, 0.0024999976)
 
-[node name="torso" parent="character-digger2/character-digger/root" index="2"]
-transform = Transform3D(0.993068, -0.0502537, -0.106253, 1.86265e-09, 0.903989, -0.427555, 0.117537, 0.424591, 0.897723, -1.44382e-15, 0.223184, -7.21911e-16)
-
-[node name="arm-left" parent="character-digger2/character-digger/root/torso" index="0"]
-transform = Transform3D(0.604023, 0.219846, -0.766044, -0.34202, 0.939693, 1.49012e-08, 0.719846, 0.262003, 0.642788, 0.15, 0.2, 0.0025)
-
-[node name="arm-right" parent="character-digger2/character-digger/root/torso" index="1"]
-transform = Transform3D(0.604023, -0.219846, -0.766044, 0.34202, 0.939693, -1.49012e-08, 0.719846, -0.262003, 0.642788, -0.15, 0.2, 0.0025)
-
-[node name="head" parent="character-digger2/character-digger/root/torso" index="2"]
-transform = Transform3D(1, 0, 0, 0, 0.903989, 0.427555, 0, -0.427555, 0.903989, -1.44382e-15, 0.26, 3.60956e-16)
+[node name="leg-left" parent="character-keeper2/character-keeper/root" index="2"]
+transform = Transform3D(1, 0, 0, 0, 0.5607042, -0.8280162, 0, 0.8280162, 0.5607042, 0.0791, 0.221, -0.0867)
 
 [node name="character-ghost2" parent="." instance=ExtResource("43_p2hwx")]
 transform = Transform3D(0.375755, 0, 0.926719, 0, 1, 0, -0.926719, 0, 0.375755, 24.1887, 0, 12.3639)
@@ -2352,11 +2332,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0754966)
 [node name="torso" parent="character-ghost2/character-ghost/root" index="0"]
 transform = Transform3D(1, 0, 0, 0, 0.937901, -0.346904, 0, 0.346904, 0.937901, -1.44382e-15, 0.223184, -7.21911e-16)
 
-[node name="arm-left" parent="character-ghost2/character-ghost/root/torso" index="0"]
-transform = Transform3D(0.316235, 0.849098, -0.423117, 0.389427, 0.290511, 0.874043, 0.865068, -0.441176, -0.238792, 0.15, 0.225, 0.0025)
-
-[node name="arm-right" parent="character-ghost2/character-ghost/root/torso" index="1"]
+[node name="arm-right" parent="character-ghost2/character-ghost/root/torso" index="0"]
 transform = Transform3D(0.771517, -0.463438, -0.435874, 0.54547, 0.834467, 0.0782699, 0.327449, -0.298143, 0.896598, -0.15, 0.225, 0.0025)
+
+[node name="arm-left" parent="character-ghost2/character-ghost/root/torso" index="1"]
+transform = Transform3D(0.316235, 0.849098, -0.423117, 0.389427, 0.290511, 0.874043, 0.865068, -0.441176, -0.238792, 0.15, 0.225, 0.0025)
 
 [node name="character-ghost3" parent="." instance=ExtResource("43_p2hwx")]
 transform = Transform3D(0.998075, 0, 0.062024, 0, 1, 0, -0.062024, 0, 0.998075, 27.9655, 0.830388, 12.3532)
@@ -2367,14 +2347,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0754966)
 [node name="torso" parent="character-ghost3/character-ghost/root" index="0"]
 transform = Transform3D(1, 0, 0, 0, 0.937901, -0.346904, 0, 0.346904, 0.937901, -1.44382e-15, 0.223184, -7.21911e-16)
 
-[node name="arm-left" parent="character-ghost3/character-ghost/root/torso" index="0"]
-transform = Transform3D(0.316235, 0.849098, -0.423117, 0.389427, 0.290511, 0.874043, 0.865068, -0.441176, -0.238792, 0.15, 0.225, 0.0025)
-
-[node name="arm-right" parent="character-ghost3/character-ghost/root/torso" index="1"]
+[node name="arm-right" parent="character-ghost3/character-ghost/root/torso" index="0"]
 transform = Transform3D(0.771517, -0.463438, -0.435874, 0.54547, 0.834467, 0.0782699, 0.327449, -0.298143, 0.896598, -0.15, 0.225, 0.0025)
 
+[node name="arm-left" parent="character-ghost3/character-ghost/root/torso" index="1"]
+transform = Transform3D(0.316235, 0.849098, -0.423117, 0.389427, 0.290511, 0.874043, 0.865068, -0.441176, -0.238792, 0.15, 0.225, 0.0025)
+
 [node name="character-skeleton2" parent="." instance=ExtResource("44_ljov1")]
-transform = Transform3D(0.925283, 0, 0.379279, 0, 1, 0, -0.379279, 0, 0.925283, 26.3075, 0, 9.7803)
+transform = Transform3D(0.925283, 0, 0.379279, 0, 1, 0, -0.379279, 0, 0.925283, 26.125517, 0, 9.877038)
 
 [node name="root" parent="character-skeleton2/character-skeleton" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.15, 0)
@@ -2382,38 +2362,44 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.15, 0)
 [node name="leg-left" parent="character-skeleton2/character-skeleton/root" index="0"]
 transform = Transform3D(0.8584, 0, 0, 0, 0.22217, 0.829151, 0, -0.829151, 0.22217, 0.074204, 0.223184, -7.21911e-16)
 
-[node name="leg-right" parent="character-skeleton2/character-skeleton/root" index="1"]
-transform = Transform3D(0.8584, 0, 0, 0, 0.22217, 0.829151, 0, -0.829151, 0.22217, -0.074204, 0.223184, -7.21911e-16)
-
-[node name="arm-left" parent="character-skeleton2/character-skeleton/root/torso" index="0"]
-transform = Transform3D(0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 0, 0, 1, 0.15, 0.225, 0.0025)
-
 [node name="arm-right" parent="character-skeleton2/character-skeleton/root/torso" index="1"]
 transform = Transform3D(0.707107, -0.707107, 0, 0.707107, 0.707107, 0, 0, 0, 1, -0.15, 0.225, 0.0025)
+
+[node name="arm-left" parent="character-skeleton2/character-skeleton/root/torso" index="2"]
+transform = Transform3D(0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 0, 0, 1, 0.15, 0.225, 0.0025)
+
+[node name="leg-right" parent="character-skeleton2/character-skeleton/root" index="2"]
+transform = Transform3D(0.8584, 0, 0, 0, 0.22217, 0.829151, 0, -0.829151, 0.22217, -0.074204, 0.223184, -7.21911e-16)
 
 [node name="character-vampire2" parent="." instance=ExtResource("45_xs5q8")]
 transform = Transform3D(0.399165, 0, 0.916879, 0, 1, 0, -0.916879, 0, 0.399165, 26.211, 0, 12.8794)
 
-[node name="leg-left" parent="character-vampire2/character-vampire/root" index="0"]
-transform = Transform3D(1, 0, 0, 0, 0.258819, -0.965926, 0, 0.965926, 0.258819, 0.0791, 0.221, -0.0867)
+[node name="arm-right" parent="character-vampire2/character-vampire/root/torso" index="0"]
+transform = Transform3D(0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 0, 0, 1, -0.15, 0.2, 0.0025)
+
+[node name="arm-left" parent="character-vampire2/character-vampire/root/torso" index="1"]
+transform = Transform3D(0.965926, -0.258819, 0, 0.258819, 0.965926, 0, 0, 0, 1, 0.15, 0.2, 0.0025)
 
 [node name="leg-right" parent="character-vampire2/character-vampire/root" index="1"]
 transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, -0.0761, 0.22, -0.009)
 
-[node name="arm-left" parent="character-vampire2/character-vampire/root/torso" index="0"]
-transform = Transform3D(0.965926, -0.258819, 0, 0.258819, 0.965926, 0, 0, 0, 1, 0.15, 0.2, 0.0025)
-
-[node name="arm-right" parent="character-vampire2/character-vampire/root/torso" index="1"]
-transform = Transform3D(0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 0, 0, 1, -0.15, 0.2, 0.0025)
+[node name="leg-left" parent="character-vampire2/character-vampire/root" index="2"]
+transform = Transform3D(1, 0, 0, 0, 0.258819, -0.965926, 0, 0.965926, 0.258819, 0.0791, 0.221, -0.0867)
 
 [node name="character-zombie2" parent="." instance=ExtResource("46_fx3nq")]
 transform = Transform3D(0.951035, 0, 0.309083, 0, 1, 0, -0.309083, 0, 0.951035, 28.0262, 0, 11.63)
 
+[node name="torso" parent="character-zombie2/character-zombie/root" index="2"]
+transform = Transform3D(1, 0, 0, 0, 0.99680126, 0.079920575, 0, -0.079920575, 0.99680126, -1.4438228e-15, 0.223184, -7.219114e-16)
+
 [node name="arm-left" parent="character-zombie2/character-zombie/root/torso" index="0"]
-transform = Transform3D(0.5, 0, -0.866025, 0, 1, 0, 0.866025, 0, 0.5, 0.15, 0.2, 0.0025)
+transform = Transform3D(0.7071064, 0.7071068, 1.8626444e-09, -0.70484465, 0.70484483, -0.07992054, -0.056512356, 0.05651237, 0.99680084, 0.15, 0.2, 0.0025)
 
 [node name="arm-right" parent="character-zombie2/character-zombie/root/torso" index="1"]
-transform = Transform3D(0.5, 0, 0.866025, 0, 1, 0, -0.866025, 0, 0.5, -0.15, 0.2, 0.0025)
+transform = Transform3D(0.7071064, -0.7071068, -1.8626444e-09, 0.70484465, 0.70484483, -0.07992054, 0.056512356, 0.05651237, 0.99680084, -0.15, 0.2, 0.0025)
+
+[node name="head" parent="character-zombie2/character-zombie/root/torso" index="2"]
+transform = Transform3D(1, 0, 0, 0, 0.97133374, 0.2377198, 0, -0.2377198, 0.97133374, 0, 0.22398207, 0)
 
 [node name="character-zombie3" parent="." instance=ExtResource("46_fx3nq")]
 transform = Transform3D(0.934397, 0, 0.356232, 0, 1, 0, -0.356232, 0, 0.934397, 25.4472, 0, 10.9938)
@@ -2427,11 +2413,26 @@ transform = Transform3D(0.5, 0, 0.866025, 0, 1, 0, -0.866025, 0, 0.5, -0.15, 0.2
 [node name="character-zombie4" parent="." instance=ExtResource("46_fx3nq")]
 transform = Transform3D(-0.195963, 0, 0.980611, 0, 1, 0, -0.980611, 0, -0.195963, 26.8532, 0, 14.5141)
 
+[node name="leg-left" parent="character-zombie4/character-zombie/root" index="0"]
+transform = Transform3D(1, 0, 0, 0, -0.3075227, -0.9515407, 0, 0.9515407, -0.3075227, 0.083570965, 0.086, -0.034)
+
+[node name="leg-right" parent="character-zombie4/character-zombie/root" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.083570965, 0.17625, 0.066)
+
+[node name="torso" parent="character-zombie4/character-zombie/root" index="2"]
+transform = Transform3D(1, 0, 0, 0, 0.9819323, -0.18923254, 0, 0.18923254, 0.9819323, 0, 0.098, -0.028)
+
 [node name="arm-left" parent="character-zombie4/character-zombie/root/torso" index="0"]
-transform = Transform3D(0.5, 0, -0.866025, 0, 1, 0, 0.866025, 0, 0.5, 0.15, 0.2, 0.0025)
+transform = Transform3D(0.9659261, -0.2541413, 0.048970785, 0.25414094, 0.9671464, 0.0063354997, -0.048972033, 0.0063258624, 0.99877965, 0.15, 0.2, 0.0025)
 
 [node name="arm-right" parent="character-zombie4/character-zombie/root/torso" index="1"]
-transform = Transform3D(0.5, 0, 0.866025, 0, 1, 0, -0.866025, 0, 0.5, -0.15, 0.2, 0.0025)
+transform = Transform3D(0.9659261, 0.2541413, -0.048970785, -0.25414094, 0.9671464, 0.0063354997, 0.048972033, 0.0063258624, 0.99877965, -0.15, 0.2, 0.0025)
+
+[node name="head" parent="character-zombie4/character-zombie/root/torso" index="2"]
+transform = Transform3D(1, 0, 0, 0, 0.9999963, -0.0027227104, 0, 0.0027227104, 0.9999963, 0, 0.22398207, 0)
+
+[node name="AnimationPlayer" parent="character-zombie4" index="1"]
+autoplay = "crouch"
 
 [node name="farol3" parent="." instance=ExtResource("47_870bn")]
 transform = Transform3D(1, -4.35622e-09, 0, 4.35622e-09, 1, 0, 0, 0, 1, 28.5046, -0.101208, 7.33891)
@@ -2440,13 +2441,15 @@ transform = Transform3D(1, -4.35622e-09, 0, 4.35622e-09, 1, 0, 0, 0, 1, 28.5046,
 transform = Transform3D(1, -4.35622e-09, 0, 4.35622e-09, 1, 0, 0, 0, 1, 27.0982, -0.101208, 7.30619)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.8404, 1.27833, 15.9817)
-light_color = Color(0.700218, 0.607487, 0.391607, 1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.973074, 1.27833, 15.678725)
+light_color = Color(0.86439157, 0.3931775, 0.55364096, 1)
+omni_attenuation = 2.0
 
 [node name="OmniLight3D4" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.3569, 1.27833, 12.8166)
-light_color = Color(0.797127, 0.548995, 0.45866, 1)
-omni_range = 3.0
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.3569, 1.27833, 13.2356)
+light_color = Color(0.79271775, 0.5534819, 0.43708163, 1)
+omni_range = 10.0
+omni_attenuation = 0.5
 
 [node name="OmniLight3D2" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.0606, 1.27833, 12.0003)
@@ -2461,10 +2464,13 @@ omni_range = 3.0
 [node name="lightpost-all2" parent="." instance=ExtResource("48_1mo5e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.0199, 0, 12.9662)
 
+[node name="worldenvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_ulko1")
+
 [editable path="escenario/mausoleo"]
 [editable path="escenario/mausoleo/tejado"]
 [editable path="escenario/mausoleo/marco_puerta"]
-[editable path="character-digger2"]
+[editable path="character-keeper2"]
 [editable path="character-ghost2"]
 [editable path="character-ghost3"]
 [editable path="character-skeleton2"]
